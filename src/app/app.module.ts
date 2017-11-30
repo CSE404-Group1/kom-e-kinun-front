@@ -1,6 +1,8 @@
 // modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // components
 import { AppComponent } from './app.component';
@@ -21,9 +23,19 @@ import { AdminProfileComponent } from './components/admin-profile/admin-profile.
 import { AdminEditProfileComponent } from './components/admin-edit-profile/admin-edit-profile.component';
 import { AdminSettingsComponent } from './components/admin-settings/admin-settings.component';
 import { NotFoundpageComponent } from './components/not-foundpage/not-foundpage.component';
+import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component'
 
 // services
-import { ApiService } from './services/api.service'
+import { ApiService } from './services/api.service';
+
+const appRoutes: Routes = [
+  { path: '', component: HomepageComponent },
+  { path: 'category/:cat', component: CategorypageComponent },
+  { path: 'login', component: AdminLoginComponent },
+  { path: 'register', component: AdminRegistrationComponent },
+  { path: 'terms-and-conditions', component: TermsAndConditionsComponent }
+
+]
 
 
 @NgModule({
@@ -45,12 +57,17 @@ import { ApiService } from './services/api.service'
     AdminProfileComponent,
     AdminEditProfileComponent,
     AdminSettingsComponent,
-    NotFoundpageComponent
+    NotFoundpageComponent,
+    TermsAndConditionsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

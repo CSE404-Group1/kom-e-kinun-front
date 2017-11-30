@@ -1,3 +1,71 @@
-<p>
-  admin-registration works!
-</p>
+<div class="container">
+    <div class="form-intro">
+      <span class="lnr lnr-store"></span>
+      <h2>Register your shop</h2>
+    </div>
+    <form class="form" #f="ngForm" (submit)="onSubmit(f)">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+
+          <div class="form-group">
+            <span class="lnr lnr-store"></span><label for="username">Shop/Dealer Name</label><strong class="form-error" *ngIf="isEmpty">Please type a Store Name!</strong>
+            <input class="form-control" [(ngModel)]="username" (blur)="checkIfFilled($event)" type="text" name="username" required>
+          </div>
+
+          <div class="form-group" >
+            <span class="lnr lnr-envelope"></span><label for="email">Email</label><strong class="form-error" *ngIf="isEmpty">Please type a valid Email!</strong>
+            <input class="form-control" [(ngModel)]="email" (blur)="checkIfFilled($event)" type="email" name="email" required>
+          </div>
+
+          <div class="form-group" >
+            <span class="lnr lnr-lock"></span><label for="password">Password</label><strong class="form-error" *ngIf="isEmpty">Please type a Password!</strong>
+            <input class="form-control" [(ngModel)]="password" (blur)="checkIfFilled($event)" type="password" name="password" required>
+          </div>
+
+          <div class="form-group" >
+            <span class="lnr lnr-pencil"></span><label for="description">Short Description <span class="greyed-out">(Not Required)</span></label>
+            <textarea class="form-control" [(ngModel)]="description" (blur)="checkIfFilled($event)" type="text" name="description" rows="5"></textarea>
+          </div>
+
+        </div>
+        <!-- end of left side -->
+        <div class="col-md-5">
+
+          <div class="form-group" >
+            <span class="lnr lnr-phone-handset"></span><label for="phone_num">Phone Number</label><strong class="form-error" *ngIf="isEmpty">Please type a valid Phone Number!</strong>
+            <input class="form-control" [(ngModel)]="phone_num" (blur)="checkIfFilled($event)" type="text" name="phone_num" required>
+          </div>
+
+          <div class="form-group" >
+            <span class="lnr lnr-earth"></span><label for="facebook_page">Facebook Page <span class="greyed-out">(Not Required)</span></label>
+            <input class="form-control" [(ngModel)]="facebook_page" (blur)="checkIfFilled($event)" type="text" name="facebook_page">
+          </div>
+
+          <div class="form-group" >
+            <span class="lnr lnr-map"></span><label for="location">Location <span class="greyed-out">(Not Required)</span></label>
+            <textarea class="form-control" [(ngModel)]="location" (blur)="checkIfFilled($event)" type="text" name="location" rows="1"></textarea>
+          </div>
+
+          <div class="form-group" >
+            <span class="lnr lnr-earth"></span><label for="website">Website <span class="greyed-out">(Not Required)</span></label>
+            <input class="form-control" [(ngModel)]="website" (blur)="checkIfFilled($event)" type="text" name="website">
+          </div>
+
+          <div class="form-group">
+            <p class="greyed-out">Buy Clicking <strong>Register</strong>, you agree to all our <a href="/terms-and-conditions" routerLink="terms-and-conditions" class="link">Terms and Conditions</a> </p>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-block" id="submit">REGISTER</button>
+          </div>
+
+        </div>
+        <!-- end of right side -->
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 form-footer">
+        Do you alreay have an acoount? <a href="/login" routerLink="/login" class="link">Log In</a>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.form{
+  padding: 30px 0px;
+}
+.form-intro{
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0px;
+  color: #1E6BE8;
+}
+.form-intro h2{
+  font-weight: 300;
+}
+.form-intro span{
+  font-size: 3em;
+}
+.lnr{
+  font-size: 1.8em;
+  padding-top: 10px;
+}
+input,textarea{
+  background-color: #E8E8E8;
+  outline: none;
+  border: none;
+}
+label{
+  font-size: 1.2em;
+  font-weight: 400;
+  padding-left: 10px;
+  position: relative;
+  top: -3px;
+}
+textarea {
+    resize: none;
+}
+.greyed-out{
+  color: #BDBFBE;
+}
+.form-error{
+  position: absolute;
+}
+#submit{
+  background-color: #1E6BE8;
+  color: #f1f1f1;
+}
+.form-footer{
+  border-top: 1px solid #BDBFBE;
+  padding: 30px 15px;
+}
