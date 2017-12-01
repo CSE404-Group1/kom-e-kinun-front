@@ -6,14 +6,15 @@
     <form class="form" #f="ngForm" (submit)="onSubmit(f)">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
+          <strong class="form-error form-control" *ngIf="loginError">{{loginError}}</strong>
 
           <div class="form-group" >
-            <span class="lnr lnr-envelope"></span><label for="email">Email</label><strong class="form-error" *ngIf="isEmpty">Please type a valid Email!</strong>
+            <span class="lnr lnr-envelope"></span><label for="email">Email</label>
             <input class="form-control" [(ngModel)]="email" (blur)="checkIfFilled($event)" type="email" name="email" required>
           </div>
 
           <div class="form-group" >
-            <span class="lnr lnr-lock"></span><label for="password">Password</label><strong class="form-error" *ngIf="isEmpty">Please type a Password!</strong>
+            <span class="lnr lnr-lock"></span><label for="password">Password</label>
             <input class="form-control" [(ngModel)]="password" (blur)="checkIfFilled($event)" type="password" name="password" required>
           </div>
 
