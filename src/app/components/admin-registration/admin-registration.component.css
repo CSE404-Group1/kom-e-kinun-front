@@ -37,11 +37,15 @@ textarea {
   color: #BDBFBE;
 }
 .form-error{
-  position: absolute;
+  position: relative;
+  color: red;
+  top: -3px;
+  left: 20px;
 }
 #submit{
   background-color: #1E6BE8;
   color: #f1f1f1;
+  font-weight: 700;
 }
 .form-footer{
   border-top: 1px solid #BDBFBE;

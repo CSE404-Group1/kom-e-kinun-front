@@ -8,22 +8,22 @@
         <div class="col-md-5 col-md-offset-1">
 
           <div class="form-group">
-            <span class="lnr lnr-store"></span><label for="username">Shop/Dealer Name</label><strong class="form-error" *ngIf="isEmpty">Please type a Store Name!</strong>
+            <span class="lnr lnr-store"></span><label for="username">Shop/Dealer Name</label><strong class="form-error" *ngIf="usernameError">{{usernameError}}</strong>
             <input class="form-control" [(ngModel)]="username" (blur)="checkIfFilled($event)" type="text" name="username" required>
           </div>
 
           <div class="form-group" >
-            <span class="lnr lnr-envelope"></span><label for="email">Email</label><strong class="form-error" *ngIf="isEmpty">Please type a valid Email!</strong>
+            <span class="lnr lnr-envelope"></span><label for="email">Email</label><strong class="form-error" *ngIf="emailError">{{emailError}}</strong>
             <input class="form-control" [(ngModel)]="email" (blur)="checkIfFilled($event)" type="email" name="email" required>
           </div>
 
           <div class="form-group" >
-            <span class="lnr lnr-lock"></span><label for="password">Password</label><strong class="form-error" *ngIf="isEmpty">Please type a Password!</strong>
+            <span class="lnr lnr-lock"></span><label for="password">Password</label><strong class="form-error" *ngIf="passwordError">{{passwordError}}</strong>
             <input class="form-control" [(ngModel)]="password" (blur)="checkIfFilled($event)" type="password" name="password" required>
           </div>
 
           <div class="form-group" >
-            <span class="lnr lnr-pencil"></span><label for="description">Short Description <span class="greyed-out">(Not Required)</span></label>
+            <span class="lnr lnr-pencil"></span><label for="description">Short Description <span class="greyed-out">(Not Required)</span></label><strong class="form-error" *ngIf="descriptionError">{{descriptionError}}</strong>
             <textarea class="form-control" [(ngModel)]="description" (blur)="checkIfFilled($event)" type="text" name="description" rows="5"></textarea>
           </div>
 
@@ -32,22 +32,22 @@
         <div class="col-md-5">
 
           <div class="form-group" >
-            <span class="lnr lnr-phone-handset"></span><label for="phone_num">Phone Number</label><strong class="form-error" *ngIf="isEmpty">Please type a valid Phone Number!</strong>
+            <span class="lnr lnr-phone-handset"></span><label for="phone_num">Phone Number</label><strong class="form-error" *ngIf="phone_numError">{{phone_numError}}</strong>
             <input class="form-control" [(ngModel)]="phone_num" (blur)="checkIfFilled($event)" type="text" name="phone_num" required>
           </div>
 
           <div class="form-group" >
-            <span class="lnr lnr-earth"></span><label for="facebook_page">Facebook Page <span class="greyed-out">(Not Required)</span></label>
+            <span class="lnr lnr-earth"></span><label for="facebook_page">Facebook Page <span class="greyed-out">(Not Required)</span></label><strong class="form-error" *ngIf="facebook_pageError">{{facebook_pageError}}</strong>
             <input class="form-control" [(ngModel)]="facebook_page" (blur)="checkIfFilled($event)" type="text" name="facebook_page">
           </div>
 
           <div class="form-group" >
-            <span class="lnr lnr-map"></span><label for="location">Location <span class="greyed-out">(Not Required)</span></label>
+            <span class="lnr lnr-map"></span><label for="location">Location <span class="greyed-out">(Not Required)</span></label><strong class="form-error" *ngIf="locationError">{{locationError}}</strong>
             <textarea class="form-control" [(ngModel)]="location" (blur)="checkIfFilled($event)" type="text" name="location" rows="1"></textarea>
           </div>
 
           <div class="form-group" >
-            <span class="lnr lnr-earth"></span><label for="website">Website <span class="greyed-out">(Not Required)</span></label>
+            <span class="lnr lnr-earth"></span><label for="website">Website <span class="greyed-out">(Not Required)</span></label><strong class="form-error" *ngIf="websiteError">{{websiteError}}</strong>
             <input class="form-control" [(ngModel)]="website" (blur)="checkIfFilled($event)" type="text" name="website">
           </div>
 
