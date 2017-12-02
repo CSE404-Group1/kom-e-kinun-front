@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { Ng2Webstorage } from 'ngx-webstorage';
 
 // components
 import { AppComponent } from './app.component';
@@ -29,13 +30,18 @@ import { TermsAndConditionsComponent } from './components/terms-and-conditions/t
 // services
 import { ApiService } from './services/api.service';
 
+// guards
+import { AuthGuard } from './guards/auth.guard';
+
+
+// routes
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'category/:cat', component: CategorypageComponent },
   { path: 'login', component: AdminLoginComponent },
   { path: 'register', component: AdminRegistrationComponent },
-  { path: 'terms-and-conditions', component: TermsAndConditionsComponent }
-
+  { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
+  { path: 'dashboard', canActivate: [AuthGuard], component: AdminDashboardComponent }
 ]
 
 
@@ -65,10 +71,12 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2Webstorage
   ],
   providers: [
-    ApiService
+    ApiService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
