@@ -41,7 +41,8 @@ const appRoutes: Routes = [
   { path: 'login', component: AdminLoginComponent },
   { path: 'register', component: AdminRegistrationComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
-  { path: 'dashboard', canActivate: [AuthGuard], component: AdminDashboardComponent }
+  { path: 'dashboard', canActivate: [AuthGuard], component: AdminDashboardComponent },
+  { path: '**', component: NotFoundpageComponent }
 ]
 
 

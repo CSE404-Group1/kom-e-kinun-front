@@ -23,6 +23,11 @@ export class NavbarComponent implements OnInit {
 
   logout(){
     this.localSt.clear('currentUser')
+    this.localSt.observe('currentUser')
+			.subscribe((value) =>{
+         this.currentUser = JSON.parse(value)
+         console.log(value)
+      });
     this.router.navigateByUrl('/');
   }
 
