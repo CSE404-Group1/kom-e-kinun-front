@@ -23,7 +23,10 @@
         "./assets/css/icon-font.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "./assets/js/jquery.menu-aim.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
