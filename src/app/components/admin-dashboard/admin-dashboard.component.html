@@ -1,8 +1,9 @@
 <header class="cd-main-header">
-		<a href="#0" class="cd-logo">logo</a>
+		<a href="#0" class="cd-logo">KomEkinun</a>
 
 		<div class="cd-search is-hidden">
-			<form action="#0">
+			<form>
+				<i class="fa fa-search search-icon" aria-hidden="true"></i>
 				<input type="search" placeholder="Search...">
 			</form>
 		</div> <!-- cd-search -->
@@ -11,96 +12,61 @@
 
 		<nav class="cd-nav">
 			<ul class="cd-top-nav">
-				<li><a href="#0">Tour</a></li>
-				<li><a href="#0">Support</a></li>
 				<li class="has-children account">
-					<a href="#0">
-
-						Account
+					<a>
+							{{currentUser.username}}
+							<span class="prof-pic"><i class="fa fa-smile-o" aria-hidden="true"></i></span>
 					</a>
 
 					<ul>
 
-						<li><a href="#0">My Account</a></li>
-						<li><a href="#0">Edit Account</a></li>
-						<li><a href="#0">Logout</a></li>
+						<li><a><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+						<li><a><i class="fa fa-cog" aria-hidden="true"></i> Account Settings</a></li>
+						<li (click)="logout()"><a><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
 		</nav>
 	</header> <!-- .cd-main-header -->
 
+
+	<!-- Store Management -->
 	<main class="cd-main-content">
 		<nav class="cd-side-nav">
 			<ul>
-				<li class="cd-label">Main</li>
-				<li class="has-children overview">
-					<a href="#0">Overview</a>
-
-					<ul>
-						<li><a href="#0">All Data</a></li>
-						<li><a href="#0">Category 1</a></li>
-						<li><a href="#0">Category 2</a></li>
-					</ul>
+				<li class="cd-label">Store Management</li>
+				<!-- overview section -->
+				<li class="has-children overview" [class.active]="activeTab == 'overview'" (click)="active = 'overview'; activeTab = overview">
+					<a><i class="fa fa-line-chart side-nav-icon" aria-hidden="true"></i>Overview</a>
 				</li>
-				<li class="has-children notifications active">
-					<a href="#0">Notifications<span class="count">3</span></a>
+				<!-- products section -->
+				<li class="has-children store" [class.active]="activeTab == 'products'" (click)="activeTab = 'products'">
+					<a ><i class="fa fa-archive side-nav-icon" aria-hidden="true"></i> Products<span class="count hide"></span></a>
 
 					<ul>
-						<li><a href="#0">All Notifications</a></li>
-						<li><a href="#0">Friends</a></li>
-						<li><a href="#0">Other</a></li>
-					</ul>
-				</li>
-
-				<li class="has-children comments">
-					<a href="#0">Comments</a>
-
-					<ul>
-						<li><a href="#0">All Comments</a></li>
-						<li><a href="#0">Edit Comment</a></li>
-						<li><a href="#0">Delete Comment</a></li>
+						<li (click)="active = 'product-list'"><a><i class="fa fa-list-ul" aria-hidden="true"></i> All Products</a></li>
+						<li (click)="active = 'add-product'"><a><i class="fa fa-plus" aria-hidden="true"></i> Add New Product</a></li>
 					</ul>
 				</li>
 			</ul>
-
+			<!-- end of Store Management -->
+			<!-- Personal -->
 			<ul>
-				<li class="cd-label">Secondary</li>
-				<li class="has-children bookmarks">
-					<a href="#0">Bookmarks</a>
-
+				<li class="cd-label">Personal</li>
+				<!-- account section -->
+				<li class="has-children accountTab" [class.active]="activeTab == 'accountTab'" (click)="activeTab = 'accountTab'">
+					<a ><i class="fa fa-user side-nav-icon" aria-hidden="true"></i>Account</a>
 					<ul>
-						<li><a href="#0">All Bookmarks</a></li>
-						<li><a href="#0">Edit Bookmark</a></li>
-						<li><a href="#0">Import Bookmark</a></li>
-					</ul>
-				</li>
-				<li class="has-children images">
-					<a href="#0">Images</a>
-
-					<ul>
-						<li><a href="#0">All Images</a></li>
-						<li><a href="#0">Edit Image</a></li>
-					</ul>
-				</li>
-
-				<li class="has-children users">
-					<a href="#0">Users</a>
-
-					<ul>
-						<li><a href="#0">All Users</a></li>
-						<li><a href="#0">Edit User</a></li>
-						<li><a href="#0">Add User</a></li>
+						<li><a><i class="fa fa-user-o" aria-hidden="true"></i> My Account</a></li>
+						<li><a><i class="fa fa-cog" aria-hidden="true"></i> Account Settings</a></li>
 					</ul>
 				</li>
 			</ul>
-
-			<ul>
-				<li class="cd-label">Action</li>
-				<li class="action-btn"><a href="#0">+ Button</a></li>
-			</ul>
+			<!-- end of Personal -->
 		</nav>
 
 		<div class="content-wrapper">
-			<h1>Responsive Sidebar Navigation</h1>
+			<div *ngIf="active == 'overview'"><app-admin-overview></app-admin-overview></div>
+			<div *ngIf="active == 'product-list'"><app-admin-product-list></app-admin-product-list></div>
+			<div *ngIf="active == 'add-product'"><app-admin-add-product></app-admin-add-product></div>
 		</div> <!-- .content-wrapper -->

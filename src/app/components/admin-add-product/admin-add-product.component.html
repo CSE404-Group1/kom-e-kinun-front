@@ -1,3 +1,42 @@
-<p>
-  admin-add-product works!
-</p>
+<div class="container">
+    <div class="form-intro">
+      <i class="fa fa-archive" aria-hidden="true"></i>
+      <h2>Add a new Product</h2>
+    </div>
+    <form class="form" #f="ngForm" (submit)="onSubmit(f)">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <!-- name -->
+          <div class="form-group">
+            <span><i class="fa fa-archive" aria-hidden="true"></i></span><label for="username">Product Name</label><strong class="form-error" *ngIf="err">{{err}}</strong>
+            <input class="form-control" [(ngModel)]="name" (blur)="checkIfFilled($event)" type="text" name="name" required>
+          </div>
+          <!-- desc -->
+          <div class="form-group" >
+            <span class="lnr lnr-pencil"></span><label for="description">Short Description <span class="greyed-out">(Not Required)</span></label><strong class="form-error" *ngIf="descriptionError">{{descriptionError}}</strong>
+            <textarea class="form-control" [(ngModel)]="description" (blur)="checkIfFilled($event)" type="text" name="description" rows="5"></textarea>
+          </div>
+          <!-- price -->
+          <div class="row">
+              <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                <span><i class="fa fa-money" aria-hidden="true"></i></span><label for="actual_price">Original Price</label><strong class="form-error" *ngIf="err">{{err}}</strong>
+                <input class="form-control" [(ngModel)]="actual_price" (blur)="checkIfFilled($event)" type="text" name="actual_price" required>
+              </div>
+
+              <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                <span><i class="fa fa-money" aria-hidden="true"></i></span><label for="sale_price">Reduced Price</label><strong class="form-error" *ngIf="err">{{err}}</strong>
+                <input class="form-control" [(ngModel)]="sale_price" (blur)="checkIfFilled($event)" type="text" name="sale_price" required>
+              </div>
+          </div>
+          <!-- date -->
+
+
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 form-footer">
+        Do you alreay have an acoount? <a href="/login" routerLink="/login" class="link">Log In</a>
+      </div>
+    </div>
+</div>

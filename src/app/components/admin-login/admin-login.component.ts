@@ -32,8 +32,14 @@ export class AdminLoginComponent implements OnInit {
     this.reqObj.password = f.form.value.password;
 
     this.api.login(this.reqObj).subscribe((res)=>{
-      this.storage.store('currentUser', JSON.stringify(res));
-      this.router.navigateByUrl('/dashboard');
+      this.storage.store('currentUserToken', JSON.stringify(res));
+
+      this.api.getCurrentUser().subscribe((res)=>{
+        this.storage.store('currentUser', JSON.stringify(res))
+        this.router.navigateByUrl('/dashboard');
+      }, (err)=>{
+        console.log(err)
+      })
     },(err)=>{
       if(err.error.message == "The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed."){
         this.loginError = "Please Fill in The Login informations first";

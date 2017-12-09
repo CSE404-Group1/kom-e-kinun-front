@@ -26,6 +26,7 @@ import { AdminEditProfileComponent } from './components/admin-edit-profile/admin
 import { AdminSettingsComponent } from './components/admin-settings/admin-settings.component';
 import { NotFoundpageComponent } from './components/not-foundpage/not-foundpage.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component'
+import { AdminOverviewComponent } from './components/admin-overview/admin-overview.component';
 
 // services
 import { ApiService } from './services/api.service';
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     AdminLoginComponent,
     AdminRegistrationComponent,
     AdminDashboardComponent,
+    AdminOverviewComponent,
     AdminProductListComponent,
     AdminProductDetailsComponent,
     AdminAddProductComponent,

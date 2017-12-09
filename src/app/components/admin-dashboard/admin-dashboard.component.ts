@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-declare var $ :any;
+import { LocalStorageService } from 'ngx-webstorage';
+import { Router } from '@angular/router';
+
+declare var $:any;
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -7,11 +10,19 @@ declare var $ :any;
   styleUrls: ['./admin-dashboard.component.css']
 })
 export class AdminDashboardComponent implements OnInit {
+  active:string;
+  activeTab:string;
+  currentUser:any;
 
-  constructor() { }
-
+  constructor(private storage:LocalStorageService, private router:Router) { }
   ngOnInit() {
-    //cache DOM elements
+
+    this.active = 'overview'
+    this.activeTab = 'overview'
+    this.currentUser = JSON.parse(this.storage.retrieve('currentUser'))
+    console.log(JSON.parse(this.storage.retrieve('currentUser')))
+
+    // Jquery code for ui
   	var mainContent = $('.cd-main-content'),
   		header = $('.cd-main-header'),
   		sidebar = $('.cd-side-nav'),
@@ -141,4 +152,9 @@ export class AdminDashboardComponent implements OnInit {
   	}
   }
 
+  logout(){
+    this.storage.clear('currentUser');
+    this.storage.clear('currentUserToken');
+    this.router.navigateByUrl('/');
+  }
 }
