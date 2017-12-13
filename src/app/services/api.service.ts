@@ -9,7 +9,11 @@ import { LocalStorageService } from 'ngx-webstorage';
 export class ApiService {
   private reqObj_reg:RegisterModel;
   private reqObj_login:LoginModel;
+  private reqObj_addItem:ItemModel;
   private userToken:any;
+
+
+
 
   constructor(private http:HttpClient, private storage:LocalStorageService) { }
   // USER
@@ -32,7 +36,11 @@ export class ApiService {
 
   // ITEMS
   addItem(fromForm:ItemModel){
-
+    this.reqObj_addItem = fromForm;
+    this.userToken = JSON.parse(this.storage.retrieve('currentUserToken'));
+    return this.http.post('http://127.0.0.1:8000/api/items', this.reqObj_addItem, {
+      headers: new HttpHeaders().set('Authorization', this.userToken.token_type+' '+this.userToken.access_token)
+    })
   }
 
 }

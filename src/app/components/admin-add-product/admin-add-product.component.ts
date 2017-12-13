@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemModel } from '../../models/item.model';
 import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
+import { Output } from '@angular/core';
 
 @Component({
   selector: 'app-admin-add-product',
@@ -10,9 +12,29 @@ import { ApiService } from '../../services/api.service';
 export class AdminAddProductComponent implements OnInit {
   private reqObj:ItemModel;
   private today: string;
-  private sub_cata_1:Array<string>
+  private sub_cata_1:Array<string>;
+  // error messages
+  private nameError:String;
+  private descriptionError:String;
+  private actual_priceError:String;
+  private sale_priceError:String;
+  private offer_start_dateError:String;
+  private offer_end_dateError:String;
+  private quantityError:String;
+  private offer_descriptionError:String;
+  private brand_nameError:String;
+  private product_origin_pageError:String;
+  private catagoryError:String;
+  private sub_catagory_1Error:String;
+  private sub_catagory_2Error:String;
+  private sub_catagory_3Error:String;
+  private keywordsError:String;
+  private is_featuredError:String;
 
-  constructor(private api:ApiService) { }
+
+
+
+  constructor(private api:ApiService, private router:Router) { }
 
   ngOnInit() {
     this.reqObj = {
@@ -28,7 +50,7 @@ export class AdminAddProductComponent implements OnInit {
       product_origin_page: '',
       catagory: '',
       sub_catagory_1: '',
-      sub_catagory_2: '',
+      sub_catagory_2: 'default',
       sub_catagory_3: '',
       keywords: '',
       is_featured: false,
@@ -115,7 +137,29 @@ export class AdminAddProductComponent implements OnInit {
     this.reqObj.product_origin_page = f.form.value.product_origin_page;
     this.reqObj.keywords = f.form.value.keywords;
 
-    console.log(this.reqObj)
+    this.api.addItem(this.reqObj).subscribe((res)=>{
+      if(res){
+        window.location.reload();
+      }
+    },(err)=>{
+      this.nameError = err.error.name;
+      this.descriptionError = err.error.description;
+      this.actual_priceError = err.error.actual_price;
+      this.sale_priceError = err.error.sale_price;
+      this.offer_start_dateError = err.error.offer_start_date;
+      this.offer_end_dateError = err.error.offer_end_date;
+      this.quantityError = err.error.quantity;
+      this.offer_descriptionError = err.error.offer_description;
+      this.brand_nameError = err.error.brand_name;
+      this.product_origin_pageError = err.error.product_origin_page;
+      this.catagoryError = err.error.catagory;
+      this.sub_catagory_1Error = err.error.sub_catagory_1;
+      this.sub_catagory_2Error = err.error.sub_catagory_2;
+      this.sub_catagory_3Error = err.error.sub_catagory_3;
+      this.keywordsError = err.error.keywords;
+      this.is_featuredError = err.error.is_featuredError;
+      console.log(err)
+    })
   }
 
   checkIfFilled(e){

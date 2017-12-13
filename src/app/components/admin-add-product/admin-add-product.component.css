@@ -70,3 +70,6 @@ mat-datepicker-toggle{
     background-color: #1E6BE8;
     color: #f1f1f1;
 }
+.err{
+  border-color: red;
+}
