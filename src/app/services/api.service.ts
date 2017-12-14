@@ -42,5 +42,8 @@ export class ApiService {
       headers: new HttpHeaders().set('Authorization', this.userToken.token_type+' '+this.userToken.access_token)
     })
   }
+  indexItemSeller(seller_id){
+    return this.http.get('http://127.0.0.1:8000/api/items/seller/'+seller_id)
+  }
 
 }

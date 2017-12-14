@@ -1,3 +1,32 @@
-<p>
-  admin-product-list works!
-</p>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table" style="">
+      <thead>
+          <tr>
+              <th>name</th>
+              <th>Brand</th>
+              <th>Actual Price</th>
+              <th>Reduced Price</th>
+              <th>Created At</th>
+              <th>Featured</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of items">
+              <td>{{item.name}}</td>
+              <td>{{item.brand_name}}</td>
+              <td class="text-success">{{item.actual_price | currency: '৳'}}</td>
+              <td class="text-success">{{item.sale_price | currency: '৳'}}</td>
+              <td>{{item.created_at}}</td>
+              <td>{{is_featured? 'yes':'no'}}</td>
+              <td>
+                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                <button type="button" class="btn btn-info btn-sm">Edit</button>
+              </td>
+          </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
