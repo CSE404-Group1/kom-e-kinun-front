@@ -18,10 +18,26 @@ export class AdminProductListComponent implements OnInit {
 
   ngOnInit() {
     this.currentUser = JSON.parse(this.storage.retrieve('currentUser'));
+    this.getlist();
+  }
+
+  getlist(){
     this.api.indexItemSeller(this.currentUser.id).subscribe((res)=>{
       this.items = res;
     },(err)=>{
       console.log(err);
+    })
+  }
+
+  deleteItem(id){
+    this.api.deleteItem(id).subscribe((res)=>{
+      console.log(res)
+      this.getlist();
+    },(err)=>{
+      if(err){
+        console.log(err)
+        this.getlist();
+      }
     })
   }
 

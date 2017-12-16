@@ -35,6 +35,7 @@ export class ApiService {
   }
 
   // ITEMS
+  // add item
   addItem(fromForm:ItemModel){
     this.reqObj_addItem = fromForm;
     this.userToken = JSON.parse(this.storage.retrieve('currentUserToken'));
@@ -44,6 +45,13 @@ export class ApiService {
   }
   indexItemSeller(seller_id){
     return this.http.get('http://127.0.0.1:8000/api/items/seller/'+seller_id)
+  }
+  // delete item
+  deleteItem(id){
+    this.userToken = JSON.parse(this.storage.retrieve('currentUserToken'));
+    return this.http.delete('http://127.0.0.1:8000/api/items/'+id, {
+      headers: new HttpHeaders().set('Authorization', this.userToken.token_type+' '+this.userToken.access_token)
+    })
   }
 
 }
