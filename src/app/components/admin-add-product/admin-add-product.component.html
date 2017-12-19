@@ -16,6 +16,11 @@
             <span class="lnr lnr-pencil"></span><label for="description">Short Description <span class="greyed-out">(Not Required)</span></label><strong class="form-error" *ngIf="descriptionError">{{descriptionError}}</strong>
             <textarea class="form-control" [(ngModel)]="description" (blur)="checkIfFilled($event)" type="text" name="description" rows="4"></textarea>
           </div>
+          <!-- image -->
+          <div class="form-group">
+            <span class="lnr lnr-picture"></span><label for="image">Add an Image</label>
+            <input class="form-control" type="file" #file (change)="onChange(file.files)">
+          </div>
           <!-- price -->
           <div class="row">
             <div class="form-group col-md-6 col-sm-6 col-xs-6">

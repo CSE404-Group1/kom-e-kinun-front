@@ -1,3 +1,110 @@
-<p>
-  admin-edit-product works!
-</p>
+<div class="container">
+    <div class="form-intro">
+      <i class="fa fa-archive" aria-hidden="true"></i>
+      <h2>Add a new Product</h2>
+    </div>
+    <form class="form" #f="ngForm" (submit)="onSubmit(f)">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <!-- name -->
+          <div class="form-group">
+            <span><i class="fa fa-archive" aria-hidden="true"></i></span><label for="username">Product Name</label><strong class="form-error" *ngIf="nameError">{{nameError}}</strong>
+            <input class="form-control" [(ngModel)]="name" (blur)="checkIfFilled($event)" type="text" name="name" required>
+          </div>
+          <!-- desc -->
+          <div class="form-group" >
+            <span class="lnr lnr-pencil"></span><label for="description">Short Description <span class="greyed-out">(Not Required)</span></label><strong class="form-error" *ngIf="descriptionError">{{descriptionError}}</strong>
+            <textarea class="form-control" [(ngModel)]="description" (blur)="checkIfFilled($event)" type="text" name="description" rows="4"></textarea>
+          </div>
+          <!-- price -->
+          <div class="row">
+            <div class="form-group col-md-6 col-sm-6 col-xs-6">
+              <span><i class="fa fa-money" aria-hidden="true"></i></span><label for="actual_price">Original Price</label><strong class="form-error" *ngIf="actual_priceError">{{actual_priceError}}</strong>
+              <div class="input-group">
+                <span class="input-group-addon">৳</span>
+                <input class="form-control" [(ngModel)]="actual_price" (blur)="checkIfFilled($event)" type="text" name="actual_price" required>
+              </div>
+            </div>
+            <div class="form-group col-md-6 col-sm-6 col-xs-6">
+              <span><i class="fa fa-money" aria-hidden="true"></i></span><label for="sale_price">Reduced Price</label><strong class="form-error" *ngIf="sale_priceError">{{sale_priceError}}</strong>
+              <div class="input-group">
+                <span class="input-group-addon">৳</span>
+                <input class="form-control" [(ngModel)]="sale_price" (blur)="checkIfFilled($event)" type="text" name="sale_price" required>
+              </div>
+            </div>
+          </div>
+          <!-- date -->
+          <div class="row">
+            <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                <span><i class="fa fa-money" aria-hidden="true"></i></span><label for="offer_start_date">Start Date</label><strong class="form-error" *ngIf="offer_start_dateError">{{offer_start_dateError}}</strong>
+                <input class="form-control" [(ngModel)]="offer_start_date" (blur)="checkIfFilled($event)" type="date" name="offer_start_date" required>
+            </div>
+            <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                <span><i class="fa fa-money" aria-hidden="true"></i></span><label for="offer_end_date">End Date</label><strong class="form-error" *ngIf="offer_end_dateError">{{offer_end_dateError}}</strong>
+                <input class="form-control" [(ngModel)]="offer_end_date" (blur)="checkIfFilled($event)" type="date" name="offer_end_date" required>
+            </div>
+          </div>
+          <!-- offer desc -->
+          <div class="form-group" >
+            <span class="lnr lnr-pencil"></span><label for="offer_description">Offer/Sale/Discount Description <span class="greyed-out">(Not Required)</span></label><strong class="form-error" *ngIf="offer_descriptionError">{{offer_descriptionError}}</strong>
+            <textarea class="form-control" [(ngModel)]="offer_description" (blur)="checkIfFilled($event)" type="text" name="offer_description" rows="4"></textarea>
+          </div>
+          <!-- brand name & webpage -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <span><i class="fa fa-archive" aria-hidden="true"></i></span><label for="brand_name">Brand Name</label><strong class="form-error" *ngIf="brand_nameError">{{brand_nameError}}</strong>
+                <input class="form-control" [(ngModel)]="brand_name" (blur)="checkIfFilled($event)" type="text" name="brand_name" required>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="form-group">
+                <span><i class="fa fa-archive" aria-hidden="true"></i></span><label for="product_origin_page">Origin page<span class="greyed-out">(If you have a website)</span></label><strong class="form-error" *ngIf="product_origin_pageError">{{product_origin_pageError}}</strong>
+                <input class="form-control" [(ngModel)]="product_origin_page" (blur)="checkIfFilled($event)" type="text" name="product_origin_page" required>
+              </div>
+            </div>
+          </div>
+          <!-- Categories -->
+          <div class="row">
+            <div class="col-md-4 col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select Category</label>
+                <select class="form-control" id="sel1" (change)="categorySelect($event.target.value)" [(ngModel)]="category" name="category" style="text-transform:Capitalize" [class.err]="catagoryError">
+
+                  <option selected>men's fashion</option>
+                  <option>women's fashion</option>
+                  <option>phones & tablets</option>
+                  <option>tvs, audios & cameras</option>
+                  <option>computing & gaming</option>
+                  <option>appliances</option>
+                  <option>home & living</option>
+                  <option>sports & travels</option>
+                  <option>beauty & health</option>
+                  <option>baby, kids & toys</option>
+                  <option>grocers shop</option>
+                  <option>others</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select Sub Catagory</label>
+                <select class="form-control" id="sel1" (change)="subCategory1Select($event.target.value)" [(ngModel)]="sub_catagory_1" name="sub_catagory_1" style="text-transform:Capitalize">
+                  <option value="" disabled selected>Select Category</option>
+                  <option *ngFor="let cate of sub_cata_1">{{cate}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- keywords -->
+          <div class="form-group" >
+            <span class="lnr lnr-pencil"></span><label for="keywords">keywords <span class="greyed-out">(Separate them by comma(,))</span></label><strong class="form-error" *ngIf="descriptionError">{{descriptionError}}</strong>
+            <textarea class="form-control" [(ngModel)]="keywords" (blur)="checkIfFilled($event)" type="text" name="keywords" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-block" id="submit">ADD PRODUCT</button>
+          </div>
+        </div>
+      </div>
+    </form>
+</div>

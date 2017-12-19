@@ -4,6 +4,7 @@ import { RegisterModel } from '../models/register.model';
 import { LoginModel } from '../models/login.model';
 import { ItemModel } from '../models/item.model';
 import { LocalStorageService } from 'ngx-webstorage';
+import { HttpParams } from '@angular/common/http';
 
 @Injectable()
 export class ApiService {
@@ -16,7 +17,9 @@ export class ApiService {
 
 
   constructor(private http:HttpClient, private storage:LocalStorageService) { }
+
   // USER
+  // ---------------------------------------------- /
   // user registration
   register(fromForm:RegisterModel){
     this.reqObj_reg = fromForm;
@@ -35,6 +38,7 @@ export class ApiService {
   }
 
   // ITEMS
+  // ---------------------------------------------- /
   // add item
   addItem(fromForm:ItemModel){
     this.reqObj_addItem = fromForm;
@@ -43,9 +47,18 @@ export class ApiService {
       headers: new HttpHeaders().set('Authorization', this.userToken.token_type+' '+this.userToken.access_token)
     })
   }
+  addItemImage(itemImg, itemId){
+    console.log(itemImg)
+    return this.http.post('http://127.0.0.1:8000/api/items/img/'+itemId, itemImg, {
+      headers: new HttpHeaders().set('Authorization', this.userToken.token_type+' '+this.userToken.access_token)
+    },{responseType: 'text'})
+  }
+
+  // idex item
   indexItemSeller(seller_id){
     return this.http.get('http://127.0.0.1:8000/api/items/seller/'+seller_id)
   }
+
   // delete item
   deleteItem(id){
     this.userToken = JSON.parse(this.storage.retrieve('currentUserToken'));

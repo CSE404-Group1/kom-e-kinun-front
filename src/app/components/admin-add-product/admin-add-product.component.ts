@@ -31,6 +31,8 @@ export class AdminAddProductComponent implements OnInit {
   private keywordsError:String;
   private is_featuredError:String;
 
+  files: FileList;
+
 
 
 
@@ -56,6 +58,61 @@ export class AdminAddProductComponent implements OnInit {
       is_featured: false,
     }
   }
+
+  onChange(files: FileList) {
+    this.files = files;
+  }
+
+
+  // ON FORM SUBMIT
+  onSubmit(f){
+    this.reqObj.name = f.form.value.name;
+    this.reqObj.description = f.form.value.description;
+    this.reqObj.actual_price = f.form.value.actual_price;
+    this.reqObj.sale_price = f.form.value.sale_price;
+    this.reqObj.offer_start_date = f.form.value.offer_start_date+' 00:00:00';
+    this.reqObj.offer_end_date = f.form.value.offer_end_date+' 00:00:00';
+    this.reqObj.offer_description = f.form.value.offer_description;
+    this.reqObj.brand_name = f.form.value.brand_name;
+    this.reqObj.product_origin_page = f.form.value.product_origin_page;
+    this.reqObj.keywords = f.form.value.keywords;
+
+
+    this.api.addItem(this.reqObj).subscribe((res)=>{
+      if(res){
+        // sending the image
+        var formData = new FormData();
+        // Attach file
+        formData.append('image',this.files[0]);
+
+        this.api.addItemImage(formData,res).subscribe((res)=>{
+          console.log(res)
+        },(err)=>{
+          console.log(err)
+        })
+        //window.location.reload();
+      }
+    },(err)=>{
+      this.nameError = err.error.name;
+      this.descriptionError = err.error.description;
+      this.actual_priceError = err.error.actual_price;
+      this.sale_priceError = err.error.sale_price;
+      this.offer_start_dateError = err.error.offer_start_date;
+      this.offer_end_dateError = err.error.offer_end_date;
+      this.quantityError = err.error.quantity;
+      this.offer_descriptionError = err.error.offer_description;
+      this.brand_nameError = err.error.brand_name;
+      this.product_origin_pageError = err.error.product_origin_page;
+      this.catagoryError = err.error.catagory;
+      this.sub_catagory_1Error = err.error.sub_catagory_1;
+      this.sub_catagory_2Error = err.error.sub_catagory_2;
+      this.sub_catagory_3Error = err.error.sub_catagory_3;
+      this.keywordsError = err.error.keywords;
+      this.is_featuredError = err.error.is_featuredError;
+      console.log(err)
+    })
+  }
+
   categorySelect(val){
 
     this.reqObj.catagory = val;
@@ -100,7 +157,7 @@ export class AdminAddProductComponent implements OnInit {
         "exercise & fitness", "strength & training", "racket sports","team sports", "outdoor activities","shoes & clothing", "fitness accessories", "luggage", "other"
       ]
     }
-    if (val == "sports & travels") {
+    if (val == "beauty & health") {
       this.sub_cata_1 = [
         "makeup", "personal care", "men's grooming","skin care", "hair care","beauty tools", "health & wellness", "fragrances", "other"
       ]
@@ -125,42 +182,7 @@ export class AdminAddProductComponent implements OnInit {
   subCategory1Select(val){
     this.reqObj.sub_catagory_1 = val;
   }
-  onSubmit(f){
-    this.reqObj.name = f.form.value.name;
-    this.reqObj.description = f.form.value.description;
-    this.reqObj.actual_price = f.form.value.actual_price;
-    this.reqObj.sale_price = f.form.value.sale_price;
-    this.reqObj.offer_start_date = f.form.value.offer_start_date+' 00:00:00';
-    this.reqObj.offer_end_date = f.form.value.offer_end_date+' 00:00:00';
-    this.reqObj.offer_description = f.form.value.offer_description;
-    this.reqObj.brand_name = f.form.value.brand_name;
-    this.reqObj.product_origin_page = f.form.value.product_origin_page;
-    this.reqObj.keywords = f.form.value.keywords;
 
-    this.api.addItem(this.reqObj).subscribe((res)=>{
-      if(res){
-        window.location.reload();
-      }
-    },(err)=>{
-      this.nameError = err.error.name;
-      this.descriptionError = err.error.description;
-      this.actual_priceError = err.error.actual_price;
-      this.sale_priceError = err.error.sale_price;
-      this.offer_start_dateError = err.error.offer_start_date;
-      this.offer_end_dateError = err.error.offer_end_date;
-      this.quantityError = err.error.quantity;
-      this.offer_descriptionError = err.error.offer_description;
-      this.brand_nameError = err.error.brand_name;
-      this.product_origin_pageError = err.error.product_origin_page;
-      this.catagoryError = err.error.catagory;
-      this.sub_catagory_1Error = err.error.sub_catagory_1;
-      this.sub_catagory_2Error = err.error.sub_catagory_2;
-      this.sub_catagory_3Error = err.error.sub_catagory_3;
-      this.keywordsError = err.error.keywords;
-      this.is_featuredError = err.error.is_featuredError;
-      console.log(err)
-    })
-  }
 
   checkIfFilled(e){
 
