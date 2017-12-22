@@ -31,7 +31,8 @@ export class AdminAddProductComponent implements OnInit {
   private keywordsError:String;
   private is_featuredError:String;
 
-  files: FileList;
+  private files: FileList;
+  private formData:FormData;
 
 
 
@@ -57,6 +58,7 @@ export class AdminAddProductComponent implements OnInit {
       keywords: '',
       is_featured: false,
     }
+    this.formData = new FormData();
   }
 
   onChange(files: FileList) {
@@ -80,12 +82,8 @@ export class AdminAddProductComponent implements OnInit {
 
     this.api.addItem(this.reqObj).subscribe((res)=>{
       if(res){
-        // sending the image
-        var formData = new FormData();
-        // Attach file
-        formData.append('image',this.files[0]);
-
-        this.api.addItemImage(formData,res).subscribe((res)=>{
+        this.formData.append('image',this.files[0], this.reqObj.name+res.toString());
+        this.api.addItemImage(this.formData,res).subscribe((res)=>{
           console.log(res)
         },(err)=>{
           console.log(err)

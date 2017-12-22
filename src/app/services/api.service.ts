@@ -51,7 +51,7 @@ export class ApiService {
     console.log(itemImg)
     return this.http.post('http://127.0.0.1:8000/api/items/img/'+itemId, itemImg, {
       headers: new HttpHeaders().set('Authorization', this.userToken.token_type+' '+this.userToken.access_token)
-    },{responseType: 'text'})
+    })
   }
 
   // idex item
