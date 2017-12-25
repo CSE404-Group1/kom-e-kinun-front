@@ -18,7 +18,7 @@
           </div>
           <!-- image -->
           <div class="form-group">
-            <span class="lnr lnr-picture"></span><label for="image">Add an Image</label>
+            <span class="lnr lnr-picture"></span><label for="image">Add an Image</label><strong class="form-error" *ngIf="imageError">{{imageError}}</strong>
             <input class="form-control" type="file" #file (change)="onChange(file.files)">
           </div>
           <!-- price -->

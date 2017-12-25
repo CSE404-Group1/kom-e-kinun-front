@@ -13,6 +13,7 @@ export class AdminAddProductComponent implements OnInit {
   private reqObj:ItemModel;
   private today: string;
   private sub_cata_1:Array<string>;
+  private valid:boolean;
   // error messages
   private nameError:String;
   private descriptionError:String;
@@ -30,7 +31,8 @@ export class AdminAddProductComponent implements OnInit {
   private sub_catagory_3Error:String;
   private keywordsError:String;
   private is_featuredError:String;
-
+  private imageError:String;
+  // file
   private files: FileList;
   private formData:FormData;
 
@@ -57,12 +59,37 @@ export class AdminAddProductComponent implements OnInit {
       sub_catagory_3: '',
       keywords: '',
       is_featured: false,
-    }
+    };
+    this.valid = true;
     this.formData = new FormData();
   }
 
   onChange(files: FileList) {
     this.files = files;
+    if(files == undefined){
+      this.valid = false;
+      this.imageError = 'please insert an Image';
+    }else{
+      let fileName = files[0].name;
+      let fileExt = fileName.substring(fileName.lastIndexOf('.') + 1).toLowerCase();
+      // checking the file extention
+      if(fileExt == "png" || fileExt == "bmp" || fileExt == "jpeg" || fileExt == "jpg"){
+        // checking the file size
+        if(files[0].size < 2000000){
+          this.valid = true;
+          this.imageError = '';
+        }else{
+          this.valid = false;
+          this.imageError = 'The image size must less than 2MB';
+        }
+      }else{
+        this.valid = false;
+        this.imageError = 'The image must be a jpg, png, jpeg or bmp';
+      }
+
+
+    }
+
   }
 
 
@@ -80,35 +107,39 @@ export class AdminAddProductComponent implements OnInit {
     this.reqObj.keywords = f.form.value.keywords;
 
 
-    this.api.addItem(this.reqObj).subscribe((res)=>{
-      if(res){
-        this.formData.append('image',this.files[0], this.reqObj.name+res.toString());
-        this.api.addItemImage(this.formData,res).subscribe((res)=>{
-          console.log(res)
-        },(err)=>{
-          console.log(err)
-        })
-        //window.location.reload();
-      }
-    },(err)=>{
-      this.nameError = err.error.name;
-      this.descriptionError = err.error.description;
-      this.actual_priceError = err.error.actual_price;
-      this.sale_priceError = err.error.sale_price;
-      this.offer_start_dateError = err.error.offer_start_date;
-      this.offer_end_dateError = err.error.offer_end_date;
-      this.quantityError = err.error.quantity;
-      this.offer_descriptionError = err.error.offer_description;
-      this.brand_nameError = err.error.brand_name;
-      this.product_origin_pageError = err.error.product_origin_page;
-      this.catagoryError = err.error.catagory;
-      this.sub_catagory_1Error = err.error.sub_catagory_1;
-      this.sub_catagory_2Error = err.error.sub_catagory_2;
-      this.sub_catagory_3Error = err.error.sub_catagory_3;
-      this.keywordsError = err.error.keywords;
-      this.is_featuredError = err.error.is_featuredError;
-      console.log(err)
-    })
+    if(this.valid){
+      this.api.addItem(this.reqObj).subscribe((res)=>{
+        if(res){
+          this.formData.append('image',this.files[0], this.reqObj.name+res.toString());
+          this.api.addItemImage(this.formData,res).subscribe((res)=>{
+            console.log(res)
+          },(err)=>{
+            console.log(err)
+          })
+          //window.location.reload();
+        }
+      },(err)=>{
+        this.nameError = err.error.name;
+        this.descriptionError = err.error.description;
+        this.actual_priceError = err.error.actual_price;
+        this.sale_priceError = err.error.sale_price;
+        this.offer_start_dateError = err.error.offer_start_date;
+        this.offer_end_dateError = err.error.offer_end_date;
+        this.quantityError = err.error.quantity;
+        this.offer_descriptionError = err.error.offer_description;
+        this.brand_nameError = err.error.brand_name;
+        this.product_origin_pageError = err.error.product_origin_page;
+        this.catagoryError = err.error.catagory;
+        this.sub_catagory_1Error = err.error.sub_catagory_1;
+        this.sub_catagory_2Error = err.error.sub_catagory_2;
+        this.sub_catagory_3Error = err.error.sub_catagory_3;
+        this.keywordsError = err.error.keywords;
+        this.is_featuredError = err.error.is_featuredError;
+        console.log(err)
+      })
+    }else if(this.files == undefined){
+      this.imageError = 'please insert an Image';
+    }
   }
 
   categorySelect(val){
