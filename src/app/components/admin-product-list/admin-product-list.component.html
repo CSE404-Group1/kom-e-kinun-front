@@ -3,6 +3,7 @@
     <table class="table" style="">
       <thead>
           <tr>
+              <th></th>
               <th>name</th>
               <th>Brand</th>
               <th>Actual Price</th>
@@ -14,6 +15,7 @@
       </thead>
       <tbody>
           <tr *ngFor="let item of items">
+              <td><img id="item-image" src="{{'http://127.0.0.1:8000/storage/'+item.image.substring(7)}}" alt=""></td>
               <td>{{item.name}}</td>
               <td>{{item.brand_name}}</td>
               <td class="text-success">{{item.actual_price | currency: '৳'}}</td>

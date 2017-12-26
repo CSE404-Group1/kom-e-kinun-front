@@ -110,12 +110,14 @@ export class AdminAddProductComponent implements OnInit {
     if(this.valid){
       this.api.addItem(this.reqObj).subscribe((res)=>{
         if(res){
-          this.formData.append('image',this.files[0], this.reqObj.name+res.toString());
-          this.api.addItemImage(this.formData,res).subscribe((res)=>{
-            console.log(res)
-          },(err)=>{
-            console.log(err)
-          })
+          if(this.files[0] != undefined || this.files[0] != null){
+            this.formData.append('image',this.files[0], this.reqObj.name+res.toString());
+            this.api.addItemImage(this.formData,res).subscribe((res)=>{
+              console.log(res)
+            },(err)=>{
+              console.log(err)
+            })
+          }
           //window.location.reload();
         }
       },(err)=>{
