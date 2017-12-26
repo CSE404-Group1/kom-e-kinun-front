@@ -1,11 +1,12 @@
 <div class="container">
     <div class="form-intro">
+      <br>
       <span class="lnr lnr-store"></span>
       <h2>Log In</h2>
     </div>
     <form class="form" #f="ngForm" (submit)="onSubmit(f)">
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6 col-md-offset-3" >
           <strong class="form-error form-control" *ngIf="loginError">{{loginError}}</strong>
 
           <div class="form-group" >
@@ -22,13 +23,14 @@
             <button type="submit" class="btn btn-block" id="submit">LOG IN</button>
           </div>
 
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 form-footer">
+              Don't have an acoount? <a href="/register" routerLink="/register" class="link">Register your Shop</a>
+            </div>
+          </div>
         </div>
 
       </div>
     </form>
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 form-footer">
-        Don't have an acoount? <a href="/register" routerLink="/register" class="link">Register your Shop</a>
-      </div>
-    </div>
+
 </div>

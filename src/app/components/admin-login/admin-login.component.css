@@ -1,5 +1,5 @@
 .form{
-  padding: 30px 0px;
+  padding: 10px 0px;
 }
 .form-intro{
   margin: 0 auto;
@@ -48,6 +48,5 @@ textarea {
   font-weight: 700;
 }
 .form-footer{
-  border-top: 1px solid #BDBFBE;
-  padding: 30px 15px;
+  padding: 10px 0px;
 }

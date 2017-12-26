@@ -34,6 +34,7 @@ import { ApiService } from './services/api.service';
 
 // guards
 import { AuthGuard } from './guards/auth.guard';
+import { DashboardCalenderComponent } from './components/dashboard-calender/dashboard-calender.component';
 
 
 // routes
@@ -69,7 +70,8 @@ const appRoutes: Routes = [
     AdminEditProfileComponent,
     AdminSettingsComponent,
     NotFoundpageComponent,
-    TermsAndConditionsComponent
+    TermsAndConditionsComponent,
+    DashboardCalenderComponent
   ],
   imports: [
     BrowserModule,

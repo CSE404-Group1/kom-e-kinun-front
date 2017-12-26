@@ -41,6 +41,21 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+#logo{
+  width: 150px;
+  height: 30px;
+  margin: 18px 30px;
+  background-image: url('../../../assets/images/kek_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    margin: 18px 30px;
+  }
+}
+
 /* --------------------------------
 
 Main Page Content
@@ -97,10 +112,10 @@ Header
   left: 0;
   height: 45px;
   width: 100%;
-  background: #3e454c;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1e6be8;
+  z-index: 100;
 }
 .cd-main-header::after {
   clear: both;
@@ -110,7 +125,7 @@ Header
 @media only screen and (min-width: 768px) {
   .cd-main-header {
     position: fixed;
-    height: 55px;
+    height: 60px;
   }
 }
 
@@ -237,7 +252,7 @@ Header
   transform: translateY(-50%);
   height: 26px;
   width: 26px;
-  color: #51575d;
+  color: #1e6be8;
 }
 .cd-search input {
   padding-left: 32px;
@@ -278,21 +293,21 @@ Header
     border: none;
     padding-left: 2.6em;
     border-radius: 0;
-    background-color: #3e454c;
-    border-left: 1px solid #51575d;
+    background-color: #1e6be8;
+    border-left: 1px solid #f1f1f1;
     color: #ffffff;
   }
   .cd-search input::-webkit-input-placeholder {
-    color: #777c81;
+    color: #f1f1f1;
   }
   .cd-search input::-moz-placeholder {
-    color: #777c81;
+    color: #f1f1f1;
   }
   .cd-search input:-moz-placeholder {
-    color: #777c81;
+    color: #f1f1f1;
   }
   .cd-search input:-ms-input-placeholder {
-    color: #777c81;
+    color: #f1f1f1;
   }
 }
 
@@ -354,7 +369,8 @@ Top Navigation
     margin-right: 0;
   }
   .cd-top-nav > li a {
-    padding: 1em .6em !important;
+    padding: 1.1em .6em !important;
+    background-color: #1e6be8;
   }
   .cd-top-nav img {
     display: block;
