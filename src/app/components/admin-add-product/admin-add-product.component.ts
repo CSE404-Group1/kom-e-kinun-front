@@ -118,7 +118,7 @@ export class AdminAddProductComponent implements OnInit {
               console.log(err)
             })
           }
-          //window.location.reload();
+          window.location.reload();
         }
       },(err)=>{
         this.nameError = err.error.name;

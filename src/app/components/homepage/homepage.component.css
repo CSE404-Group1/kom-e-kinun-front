@@ -1,0 +1,13 @@
+#item-image{
+  height: 120px;
+  width: auto;
+}
+#sale-price{
+  font-size: 1.8em;
+  font-weight: 500;
+  color: red;
+}
+#actual-price{
+  text-decoration: line-through;
+  color: #888;
+}

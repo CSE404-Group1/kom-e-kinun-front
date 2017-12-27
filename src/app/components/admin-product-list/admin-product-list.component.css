@@ -1,3 +1,6 @@
+.container{
+  width: 100%;
+}
 #item-image{
   height: 45px;
   width: auto;

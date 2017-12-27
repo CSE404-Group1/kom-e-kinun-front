@@ -39,6 +39,11 @@ export class ApiService {
 
   // ITEMS
   // ---------------------------------------------- /
+  // item index
+  getAllItems(){
+    return this.http.get('http://127.0.0.1:8000/api/items');
+  }
+
   // add item
   addItem(fromForm:ItemModel){
     this.reqObj_addItem = fromForm;

@@ -1,3 +1,16 @@
-<p>
-  homepage works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 well" *ngFor="let item of products">
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xm-4">
+          <img id="item-image" src="{{'http://127.0.0.1:8000/storage/'+item.image.substring(7)}}" alt="">
+        </div>
+        <div class="col-md-4 col-sm-4 col-xm-4">
+          <h4>{{item.name}}</h4>
+          <p><span id="actual-price">৳ {{item.actual_price}}</span> <span id="sale-price">৳{{item.sale_price}}</span></p>
+          <p>{{item.brand_name}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
