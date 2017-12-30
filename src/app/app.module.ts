@@ -35,6 +35,7 @@ import { ApiService } from './services/api.service';
 // guards
 import { AuthGuard } from './guards/auth.guard';
 import { DashboardCalenderComponent } from './components/dashboard-calender/dashboard-calender.component';
+import { CategoryMenuComponent } from './components/category-menu/category-menu.component';
 
 
 // routes
@@ -71,7 +72,8 @@ const appRoutes: Routes = [
     AdminSettingsComponent,
     NotFoundpageComponent,
     TermsAndConditionsComponent,
-    DashboardCalenderComponent
+    DashboardCalenderComponent,
+    CategoryMenuComponent
   ],
   imports: [
     BrowserModule,

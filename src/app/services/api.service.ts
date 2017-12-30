@@ -43,6 +43,16 @@ export class ApiService {
   getAllItems(){
     return this.http.get('http://127.0.0.1:8000/api/items');
   }
+  // by seller
+  indexItemSeller(seller_id){
+    return this.http.get('http://127.0.0.1:8000/api/items/seller/'+seller_id)
+  }
+  // by category
+  indexItemCategory(cate){
+    let category = cate.replace(/ /g, "_");
+    return this.http.get('http://127.0.0.1:8000/api/items/category/'+ category);
+  }
+
 
   // add item
   addItem(fromForm:ItemModel){
@@ -59,10 +69,8 @@ export class ApiService {
     })
   }
 
-  // idex item
-  indexItemSeller(seller_id){
-    return this.http.get('http://127.0.0.1:8000/api/items/seller/'+seller_id)
-  }
+
+
 
   // delete item
   deleteItem(id){

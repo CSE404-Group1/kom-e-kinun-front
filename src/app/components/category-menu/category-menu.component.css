@@ -1,0 +1,249 @@
+
+li{
+    list-style: none;
+}
+.L1 > li > a{
+    text-decoration: none;
+    color: black;
+}
+.bar{
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    height: 60px;
+    background: white;
+}
+.menu{
+    height: 100%;
+    width: 50px;
+    /* background: blue; */
+}
+.lnr-menu{
+    font-size: 30px;
+    color: #ff2052;
+}
+
+.menuIcon > a{
+    padding: 20px;
+    position: relative;
+    top: 18px;
+    left: -10px;
+
+}
+.menuIcon > a:hover{
+    text-decoration: none;
+    color: #ff2052;
+}
+
+.L1{
+    width: 210px;
+    height: auto;
+    border: 1px solid #e2e2e2;
+    border-top: 0px;
+    text-align: left;
+    position: relative;
+    top: 32px;
+    left: -14px;
+    padding: 7px 0px 7px 0px;
+    margin: 0px;
+    visibility: hidden;
+    background: #f5f5f5;
+}
+
+.L1 > li{
+    padding: 7px 10px 7px 25px;
+    text-transform: uppercase;
+
+}
+.L1 > li > a >span:first-child{
+    margin-right: 5px;
+}
+.lnr-chevron-right{
+    position: absolute;
+    right: 5px;
+}
+
+.L1 > li > a:hover{
+    color: #ff2052;
+}
+
+.menuIcon:hover + .level1 > .L1{
+    visibility: visible;
+    /* background: dodgerblue; */
+}
+
+.L2{
+    width: 630px;
+    height: 363px;
+    position: absolute;
+    top: 0px;
+    left: 208px;
+    border: 1px solid #e2e2e2;
+    visibility: hidden;
+    background: #f5f5f5;
+    border-top: none;
+}
+.col-sm-4{
+    height: 100%;
+    padding: 7px;
+    margin: 0px;
+}
+.col-sm-4 > ul{
+    padding: 0;
+    margin: 0;
+}
+.col-sm-4 > ul > li{
+    padding: 3px 0px 3px 10px;
+    text-transform: capitalize;
+}
+.col-sm-4 > ul > li a:hover{
+    color: #ff2052;
+}
+.col-sm-4 > ul > li:first-child{
+    padding: 4px 0px 7px 0px;
+    text-transform: uppercase;
+}
+.col-sm-4 > ul > li:last-child{
+    padding-bottom: 12px;
+}
+.col-sm-4 > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+.L1:hover{
+    visibility: visible;
+}
+
+.submenu1{
+    visibility: hidden;
+}
+.L1 > li:nth-child(1):hover > .submenu1{
+    visibility: visible;
+}
+
+.submenu2{
+    visibility: hidden;
+}
+.L1 > li:nth-child(2):hover > .submenu2{
+    visibility: visible;
+}
+
+.submenu3{
+    visibility: hidden;
+}
+.L1 > li:nth-child(3):hover > .submenu3{
+    visibility: visible;
+}
+
+.submenu4{
+    visibility: hidden;
+}
+.L1 > li:nth-child(4):hover > .submenu4{
+    visibility: visible;
+}
+.submenu5{
+    visibility: hidden;
+}
+.L1 > li:nth-child(5):hover > .submenu5{
+    visibility: visible;
+}
+.submenu6{
+    visibility: hidden;
+}
+.L1 > li:nth-child(6):hover > .submenu6{
+    visibility: visible;
+}
+.submenu7{
+    visibility: hidden;
+}
+.L1 > li:nth-child(7):hover > .submenu7{
+    visibility: visible;
+}
+.submenu8{
+    visibility: hidden;
+}
+.L1 > li:nth-child(8):hover > .submenu8{
+    visibility: visible;
+}
+.submenu9{
+    visibility: hidden;
+}
+.L1 > li:nth-child(9):hover > .submenu9{
+    visibility: visible;
+}
+.submenu10{
+    visibility: hidden;
+}
+.L1 > li:nth-child(10):hover > .submenu10{
+    visibility: visible;
+}
+.submenu11{
+    visibility: hidden;
+}
+.L1 > li:nth-child(11):hover > .submenu11{
+    visibility: visible;
+}
+.submenu12{
+    visibility: hidden;
+}
+.L1 > li:nth-child(12):hover > .submenu12{
+    visibility: visible;
+}
+
+
+/* Search bar */
+.search{
+    position: relative;
+    width: 50%;
+    height: 60%;
+    top: -48px;
+    margin: auto;
+}
+.search > input{
+    position: relative;
+    height: 100%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    width: 79%;
+    font-size: 15px;
+    background: #f5f5f5;
+    text-decoration: none;
+}
+.search > input[type=text]:focus{
+    outline: none;
+    padding-left: 20px;
+}
+.search > button{
+    position: relative;
+    height: 100%;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    width: 20%;
+    right: 3px;
+    top: -1px;
+    background:#ff2052;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+}
+.search > button:hover{
+    background: white;
+    color:#ff2052;
+}
+
+/* HELP */
+
+
+/* Content */
+.contentSec{
+    background: #f5f5f5;
+    height: 800px;
+}
+.aaa{
+    margin: auto;
+    padding: 400px;;
+    text-align: center;
+    color: red;
+}
