@@ -100,6 +100,15 @@
                 </select>
               </div>
             </div>
+            <div class="col-md-4 col-sm-4">
+              <div class="form-group">
+                <label for="sel1">Select Sub Catagory 2</label>
+                <select class="form-control" id="sel1" (change)="reqObj.sub_catagory_2 = $event.target.value" name="sub_catagory_1" style="text-transform:Capitalize">
+                  <option value="" disabled selected>Select Category</option>
+                  <option *ngFor="let cate of sub_cata_2">{{cate}}</option>
+                </select>
+              </div>
+            </div>
           </div>
           <!-- keywords -->
           <div class="form-group" >

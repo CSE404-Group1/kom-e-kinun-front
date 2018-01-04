@@ -13,6 +13,7 @@ export class AdminAddProductComponent implements OnInit {
   private reqObj:ItemModel;
   private today: string;
   private sub_cata_1:Array<string>;
+  private sub_cata_2:Array<string>;
   private valid:boolean;
   // error messages
   private nameError:String;
@@ -212,6 +213,44 @@ export class AdminAddProductComponent implements OnInit {
   }
   subCategory1Select(val){
     this.reqObj.sub_catagory_1 = val;
+    console.log('subcate1 selected')
+
+    if (val == "western clothing") {
+      this.sub_cata_2 = [
+        "Tshirts", "Polos", "Shirts", "Coats & Jackets", "Pants", "Jeans", "Shorts & Barmudas"
+      ]
+    }
+    if(val == "foot wear"){
+      this.sub_cata_2 = [
+        "Sandals & Slippers","Formal Shoes","Casual Shoes","Boots","Sneakers & Sport Shoes","Shoe Care & accessories"
+      ]
+    }
+    if(val == "innerwear & nightwear"){
+      this.sub_cata_2 = [
+        "Underwear","Undershirts","Socks","Nightwear"
+      ]
+    }
+    if(val == "men's accessories"){
+      this.sub_cata_2 = [
+        "Ties & Cuffings","Wallets & Card Holders","Eyewear","Belts","Bags","Caps & Hats","Jewellery","Other Accessories"
+      ]
+    }
+    if(val == "mens watches"){
+      this.sub_cata_2 = [
+        "Analog","Chronograp","Smart","Digital"
+      ]
+    }
+    if(val == "winter clothing"){
+      this.sub_cata_2 = [
+        "Sweaters & Cardigans","Hoodies & Sweatshirts","Coats & Jackets","Gloves & Scarves"
+      ]
+    }
+    if(val == "traditional clothing"){
+      this.sub_cata_2 = [
+        "Panjabis & Sherwanis","Fatuas & Kurtes","Waistcoats","Unstitched Fabric"
+      ]
+    }
+    /*Final PREN*/
   }
 
 
