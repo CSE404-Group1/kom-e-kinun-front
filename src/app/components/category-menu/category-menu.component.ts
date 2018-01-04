@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryMenuComponent implements OnInit {
 
+  private selectedCategory:any;
+
   constructor() { }
 
   ngOnInit() {
+
+  }
+  selectCate(cat){
+    this.selectedCategory = cat;
+    console.log(cat);
   }
 
 }
