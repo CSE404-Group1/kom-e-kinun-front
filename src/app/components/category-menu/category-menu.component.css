@@ -1,24 +1,25 @@
 
 li{
-    list-style: none;
+    list-style: none !important;
 }
 .L1 > li > a{
-    text-decoration: none;
+    text-decoration: none !important;
     color: black;
 }
-.bar{
-    font-size: 11px;
+/* .bar{
+    font-size: 11px !important;
     font-family: 'Roboto', sans-serif;
     height: 60px;
     background: white;
-}
+} */
 .menu{
+    font-size: 11px !important;
     height: 100%;
     width: 50px;
     /* background: blue; */
 }
 .lnr-menu{
-    font-size: 30px;
+    font-size: 25px;
     color: #ff2052;
 }
 
@@ -73,7 +74,8 @@ li{
 
 .L2{
     width: 630px;
-    height: 363px;
+    /* height: 363px; */
+    height: auto;
     position: absolute;
     top: 0px;
     left: 208px;

@@ -27,7 +27,9 @@ ul.navbar-nav li a{
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+#category-menu{
+  margin-top: -19px;
+}
 /* nav toggle */
 .navbar-default .navbar-toggle {
     border: none;
@@ -36,7 +38,7 @@ ul.navbar-nav li a{
     background-color: #1E6BE8;
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    background-color: #1E6BE8; 
+    background-color: #1E6BE8;
 }
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
