@@ -5,6 +5,7 @@ li{
 .L1 > li > a{
     text-decoration: none !important;
     color: black;
+    cursor: pointer;
 }
 .L1{
   z-index: 1000;
@@ -96,6 +97,7 @@ li{
     text-transform: capitalize;
 }
 .col-sm-4 > ul > li a:hover{
+    cursor: pointer;
     color: #ff2052;
 }
 .col-sm-4 > ul > li:first-child{
@@ -108,6 +110,7 @@ li{
 .col-sm-4 > ul > li > a{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 .L1:hover{

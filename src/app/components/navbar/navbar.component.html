@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <div id="category-menu" class="navbar-brand">
-        <app-category-menu></app-category-menu>
+        <app-category-menu (outputSelectedCategory)="passSelectedCategory($event)"></app-category-menu>
       </div>
       <a class="navbar-brand" id="logo" href="" routeLink="/"></a>
     </div>

@@ -28,20 +28,21 @@ import { AdminSettingsComponent } from './components/admin-settings/admin-settin
 import { NotFoundpageComponent } from './components/not-foundpage/not-foundpage.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component'
 import { AdminOverviewComponent } from './components/admin-overview/admin-overview.component';
+import { DashboardCalenderComponent } from './components/dashboard-calender/dashboard-calender.component';
+import { CategoryMenuComponent } from './components/category-menu/category-menu.component';
 
 // services
 import { ApiService } from './services/api.service';
+import { SelectedCategoryService } from './services/selected-category.service';
 
 // guards
 import { AuthGuard } from './guards/auth.guard';
-import { DashboardCalenderComponent } from './components/dashboard-calender/dashboard-calender.component';
-import { CategoryMenuComponent } from './components/category-menu/category-menu.component';
 
 
 // routes
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
-  { path: 'category/:cat', component: CategorypageComponent },
+  { path: 'category', component: CategorypageComponent },
   { path: 'login', component: AdminLoginComponent },
   { path: 'register', component: AdminRegistrationComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
@@ -84,7 +85,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     ApiService,
-    AuthGuard
+    AuthGuard,
+    SelectedCategoryService
   ],
   bootstrap: [AppComponent]
 })
