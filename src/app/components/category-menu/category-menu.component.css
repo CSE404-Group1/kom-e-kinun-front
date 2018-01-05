@@ -6,16 +6,14 @@ li{
     text-decoration: none !important;
     color: black;
 }
-/* .bar{
-    font-size: 11px !important;
-    font-family: 'Roboto', sans-serif;
-    height: 60px;
-    background: white;
-} */
+.L1{
+  z-index: 1000;
+}
 .menu{
     font-size: 11px !important;
     height: 100%;
     width: 50px;
+    z-index: 1000;
     /* background: blue; */
 }
 .lnr-menu{

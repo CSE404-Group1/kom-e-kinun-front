@@ -63,6 +63,7 @@ Main Page Content
 -------------------------------- */
 .cd-main-content{
   margin-top: 0;
+  height: 100vh;
 }
 .cd-main-content .content-wrapper {
   padding: 0px;
@@ -388,7 +389,8 @@ Sidebar
 
 -------------------------------- */
 .cd-side-nav {
-  position: absolute;
+  position: fixed;
+  overflow-y: hidden; 
   z-index: 1;
   left: 0;
   top: 0;

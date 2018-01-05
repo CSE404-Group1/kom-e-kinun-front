@@ -149,14 +149,14 @@ export class AdminAddProductComponent implements OnInit {
 
     this.reqObj.catagory = val;
 
-    if (val == "men's fashion") {
+    if (val == "mens fashion") {
       this.sub_cata_1 = [
-        "western clothing", "foot wear", "innerwear & nightwear", "traditional clothing", "winter clothing", "men's accessories", "mens watches", "other"
+        "western clothing (male)", "men's shoes", "innerwear & nightwear", "traditional clothing (male)", "winter clothing (male)", "men's accessories", "men's watches", "other "
       ]
     }
-    if (val == "women's fashion") {
+    if (val == "womens fashion") {
       this.sub_cata_1 = [
-        "western Clothing", "women's shoes", "lingerie & nightwear", "traditional clothing", "winter clothing", "women's accessories", "womens watches", "women's jewellery" ,"other"
+        "western clothing (female)", "women's shoes", "lingerie & nightwear", "traditional clothing (female)", "winter clothing (female)", "women's accessories", "women's watches", "women's jewellery" ,"other"
       ]
     }
     if (val == "phones & tablets") {
@@ -176,12 +176,12 @@ export class AdminAddProductComponent implements OnInit {
     }
     if (val == "appliances") {
       this.sub_cata_1 = [
-        "cooling & heating", "washer & dryers", "refrigerators & freezers","cooking appliances", "mixing & blending","beverage preperations", "other"
+        "cooling & heating", "washer & dryers", "refrigerators & freezers", "vacuum cleaners", "cooking appliances", "mixing & blending", "beverage preperations", "other"
       ]
     }
     if (val == "home & living") {
       this.sub_cata_1 = [
-        "bedding", "furniture", "lighting","kitchen & dining", "home fixures & repairs","bathroom accessories", "outdoor & garden", "home decor", "other"
+        "bedding", "furniture", "lighting", "kitchen & dining", "home fixures & repairs","bathroom accessories", "home storage supplies", "outdoor & garden", "home decor", "other"
       ]
     }
     if (val == "sports & travels") {
@@ -220,7 +220,7 @@ export class AdminAddProductComponent implements OnInit {
         "Tshirts", "Polos", "Shirts", "Coats & Jackets", "Pants", "Jeans", "Shorts & Barmudas"
       ]
     }
-    if(val == "foot wear"){
+    if(val == "men's shoes"){
       this.sub_cata_2 = [
         "Sandals & Slippers","Formal Shoes","Casual Shoes","Boots","Sneakers & Sport Shoes","Shoe Care & accessories"
       ]
