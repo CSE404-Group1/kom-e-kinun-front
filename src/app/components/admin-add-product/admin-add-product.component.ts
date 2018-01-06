@@ -375,6 +375,41 @@ export class AdminAddProductComponent implements OnInit {
         "asus","acer","hp","lenovo","apple"
       ]
     }
+    if(val == "cooling & heating"){
+      this.sub_cata_2 = [
+        "air conditioner","hot water system","heaters"
+      ]
+    }
+    if(val == "washer & dryers"){
+      this.sub_cata_2 = [
+        "washing machines","dryers"
+      ]
+    }
+    if(val == "refrigerators & freezers"){
+      this.sub_cata_2 = [
+        "refrigerators","freezers","compressors"
+      ]
+    }
+    if(val == "vacuum cleaners"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "cooking appliances"){
+      this.sub_cata_2 = [
+        "cooktops","exhaust & rangehoods"
+      ]
+    }
+    if(val == "mixing & blending"){
+      this.sub_cata_2 = [
+        "grinder","blendors","mixer","hanheld blendors","food processors"
+      ]
+    }
+    if(val == "beverage preperations"){
+      this.sub_cata_2 = [
+        "kettles","coffee machines","juicers"
+      ]
+    }
 
     /******Final parenthesis******/
   }
