@@ -310,7 +310,43 @@ export class AdminAddProductComponent implements OnInit {
         "cordless","corded"
       ]
     }
-    /*Final PREN*/
+    if(val == "televisions"){
+      this.sub_cata_2 = [
+        "led tv","smart tv","3d tv","4k tv"
+      ]
+    }
+    if(val == "video"){
+      this.sub_cata_2 = [
+        "dvd players","projectors"
+      ]
+    }
+    if(val == "tv & video accessories"){
+      this.sub_cata_2 = [
+        "smart box","romote controllers","wall mount","audio cables","accessories","binoculars & optics"
+      ]
+    }
+    if(val == "camera"){
+      this.sub_cata_2 = [
+        "instant camera","security & surveilance","dslr & hybrid cameras","compact cameras","semi pro cameras","camcorders","sports cameras"
+      ]
+    }
+    if(val == "camera accessories"){
+      this.sub_cata_2 = [
+        "camera lenses","camera tripods","camera memory cards","camera filters","camera flashes","other accessories"
+      ]
+    }
+    if(val == "audio & video"){
+      this.sub_cata_2 = [
+        "mp3 players","home theatres","hi-fi Stereo","sound bars","car audio & gps","musical instruments","speaker system","movies & songs"
+      ]
+    }
+    if(val == "top brands"){
+      this.sub_cata_2 = [
+        "sony","samsung","lg","Fujifilm","walton","philips"
+      ]
+    }
+
+    /******Final parenthesis******/
   }
 
   checkIfFilled(e){
