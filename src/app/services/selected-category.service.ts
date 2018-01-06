@@ -1,19 +1,22 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+
 
 @Injectable()
 export class SelectedCategoryService {
-  private selectedCategory:any;
 
-  constructor() {
-    this.selectedCategory = '';
+  constructor() {  }
+
+  private selectedCategory:Subject<any> = new Subject()
+
+
+  setSelectedCategory(cat){
+    this.selectedCategory.next(cat);
   }
 
   getSelectedCategory(){
     return this.selectedCategory;
-  }
-
-  setSelectedCategory(cat){
-    this.selectedCategory = cat;
   }
 
 }
