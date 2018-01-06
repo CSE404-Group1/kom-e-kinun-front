@@ -151,62 +151,62 @@ export class AdminAddProductComponent implements OnInit {
 
     if (val == "mens fashion") {
       this.sub_cata_1 = [
-        "western clothing (male)", "men's shoes", "innerwear & nightwear", "traditional clothing (male)", "winter clothing (male)", "men's accessories", "men's watches", "other "
+        "western clothing (male)", "men's shoes", "innerwear & nightwear", "traditional clothing (male)", "winter clothing (male)", "men's accessories", "men's watches"
       ]
     }
     if (val == "womens fashion") {
       this.sub_cata_1 = [
-        "western clothing (female)", "women's shoes", "lingerie & nightwear", "traditional clothing (female)", "winter clothing (female)", "women's accessories", "women's watches", "women's jewellery" ,"other"
+        "western clothing (female)", "women's shoes", "lingerie & nightwear", "traditional clothing (female)", "winter clothing (female)", "women's accessories", "women's watches", "women's jewellery"
       ]
     }
     if (val == "phones & tablets") {
       this.sub_cata_1 = [
-        "smartphones", "mobile & tablet accessories", "tablets", "landline", "other"
+        "smartphones", "mobile & tablet accessories", "tablets", "landline"
       ]
     }
     if (val == "tvs, audios & cameras") {
       this.sub_cata_1 = [
-        "televisions", "video", "tv & video accessories", "camera", "camera accessories", "audio & video", "top brands", "other"
+        "televisions", "video", "tv & video accessories", "camera", "camera accessories", "audio & video", "top brands"
       ]
     }
     if (val == "computing & gaming") {
       this.sub_cata_1 = [
-        "laptops", "printers & scanners", "storage","desktops & monitors", "computer accessories","top brands", "gaming", "other"
+        "laptops", "printers & scanners", "storage","desktops & monitors", "computer accessories","top brands", "gaming"
       ]
     }
     if (val == "appliances") {
       this.sub_cata_1 = [
-        "cooling & heating", "washer & dryers", "refrigerators & freezers", "vacuum cleaners", "cooking appliances", "mixing & blending", "beverage preperations", "other"
+        "cooling & heating", "washer & dryers", "refrigerators & freezers", "vacuum cleaners", "cooking appliances", "mixing & blending", "beverage preperations"
       ]
     }
     if (val == "home & living") {
       this.sub_cata_1 = [
-        "bedding", "furniture", "lighting", "kitchen & dining", "home fixures & repairs","bathroom accessories", "home storage supplies", "outdoor & garden", "home decor", "other"
+        "bedding", "furniture", "lighting", "kitchen & dining", "home fixures & repairs","bathroom accessories", "home storage supplies", "outdoor & garden", "home decor"
       ]
     }
     if (val == "sports & travels") {
       this.sub_cata_1 = [
-        "exercise & fitness", "strength & training", "racket sports","team sports", "outdoor activities","shoes & clothing", "fitness accessories", "luggage", "other"
+        "exercise & fitness", "strength & training", "racket sports","team sports", "outdoor activities","shoes & clothing", "fitness accessories", "luggage"
       ]
     }
     if (val == "beauty & health") {
       this.sub_cata_1 = [
-        "makeup", "personal care", "men's grooming","skin care", "hair care","beauty tools", "health & wellness", "fragrances", "other"
+        "makeup", "personal care", "men's grooming","skin care", "hair care","beauty tools", "health & wellness", "fragrances"
       ]
     }
     if (val == "baby, kids & toys") {
       this.sub_cata_1 = [
-        "boys fashion", "girls fashion", "babies fashion","toys & games", "baby & toddler","school essentials", "other"
+        "boys fashion", "girls fashion", "babies fashion","toys & games", "baby & toddler","school essentials"
       ]
     }
     if (val == "grocers shop") {
       this.sub_cata_1 = [
-        "cooking essentials", "tea, coffee & beverages", "breakfast","canned & packeged foods", "snacks","chocolates & desserts", "laundry & home care", "pet supplies", "other"
+        "cooking essentials", "tea, coffee & beverages", "breakfast","canned & packeged foods", "snacks","chocolates & desserts", "laundry & home care", "pet supplies"
       ]
     }
     if (val == "others") {
       this.sub_cata_1 = [
-        "books & stationery", "automobile & motorcycles", "stationery","travel & tours", "lifestyle accessories","wholesale", "other"
+        "books & stationery", "automobile & motorcycles", "stationery","travel & tours", "lifestyle accessories","wholesale"
       ]
     }
     this.reqObj.sub_catagory_1 = this.sub_cata_1[0];
@@ -215,44 +215,103 @@ export class AdminAddProductComponent implements OnInit {
     this.reqObj.sub_catagory_1 = val;
     console.log('subcate1 selected')
 
-    if (val == "western clothing") {
+    if (val == "western clothing (male)") {
       this.sub_cata_2 = [
-        "Tshirts", "Polos", "Shirts", "Coats & Jackets", "Pants", "Jeans", "Shorts & Barmudas"
+        "tshirts", "polos", "shirts", "coats & jackets", "pants", "jeans", "shorts & barmudas"
       ]
     }
     if(val == "men's shoes"){
       this.sub_cata_2 = [
-        "Sandals & Slippers","Formal Shoes","Casual Shoes","Boots","Sneakers & Sport Shoes","Shoe Care & accessories"
+        "sandals & slippers","formal shoes","casual shoes","boots","sneakers & sport shoes","shoe care & accessories"
       ]
     }
     if(val == "innerwear & nightwear"){
       this.sub_cata_2 = [
-        "Underwear","Undershirts","Socks","Nightwear"
+        "underwear","undershirts","socks","nightwear"
       ]
     }
     if(val == "men's accessories"){
       this.sub_cata_2 = [
-        "Ties & Cuffings","Wallets & Card Holders","Eyewear","Belts","Bags","Caps & Hats","Jewellery","Other Accessories"
+        "ties & cuffings","wallets & card holders","eyewear","belts","bags","caps & hats","jewellery","other accessories"
       ]
     }
-    if(val == "mens watches"){
+    if(val == "men's watches"){
       this.sub_cata_2 = [
-        "Analog","Chronograp","Smart","Digital"
+        "analog","chronograp","smart","digital"
       ]
     }
-    if(val == "winter clothing"){
+    if(val == "winter clothing (male)"){
       this.sub_cata_2 = [
-        "Sweaters & Cardigans","Hoodies & Sweatshirts","Coats & Jackets","Gloves & Scarves"
+        "sweaters & cardigans","hoodies & sweatshirts","coats & jackets","gloves & scarves"
       ]
     }
-    if(val == "traditional clothing"){
+    if(val == "traditional clothing (male)"){
       this.sub_cata_2 = [
-        "Panjabis & Sherwanis","Fatuas & Kurtes","Waistcoats","Unstitched Fabric"
+        "panjabis & sherwanis","fatuas & kurtes","waistcoats","unstitched fabric"
+      ]
+    }
+    if(val == "western clothing (female)"){
+      this.sub_cata_2 = [
+        "tops","t-shirts","pants","shrugs","shirts"
+      ]
+    }
+    if(val == "women's shoes"){
+      this.sub_cata_2 = [
+        "flats & sandals","heels","wedges","ballerinas"
+      ]
+    }
+    if(val == "lingerie & nightwear"){
+      this.sub_cata_2 = [
+        "bras","panties","nightwear","shapewear"
+      ]
+    }
+    if(val == "traditional clothing (female)"){
+      this.sub_cata_2 = [
+        "saree","anarkali & gowns","pakistani lawn","salwar kameez","boutiqe dress","unstiched fabrics","lehengas","hijabs & burkas"
+      ]
+    }
+    if(val == "women's jewellery"){
+      this.sub_cata_2 = [
+        "earrings","necklaess","nosepin","rings","anklet","jewellery sets","bangles & bracelets"
+      ]
+    }
+    if(val == "women's accessories"){
+      this.sub_cata_2 = [
+        "sunglasses & eyewear","bags & clutches","hats caps & gloves"
+      ]
+    }
+    if(val == "women's watches"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "winter clothing (female)"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "smartphones"){
+      this.sub_cata_2 = [
+        "samsung","huwawei","symphony","lg","asus","infinix","xiaomi","we","apple","lava","dcl","general mobile","helio","oppo","micromax"
+      ]
+    }
+    if(val == "mobile & tablet accessories"){
+      this.sub_cata_2 = [
+        "powerbanks","cases, covers & protections","memory cards","earphones & headsets","phone chargers","selfie-sticks","bluetooth accessories","vr headsets","cables & adaptors","other accessories","chargers","smart watches","batteries","tablet accessories","sim cards"
+      ]
+    }
+    if(val == "tablets"){
+      this.sub_cata_2 = [
+        "3g","wifi","below 8","below 9"
+      ]
+    }
+    if(val == "landline"){
+      this.sub_cata_2 = [
+        "cordless","corded"
       ]
     }
     /*Final PREN*/
   }
-
 
   checkIfFilled(e){
 
