@@ -19,15 +19,19 @@ export class CategoryMenuComponent implements OnInit {
     this.api.indexItemCategory(cat).subscribe(val=>{
       this.catService.setSelectedCategory(val);
     })
-    
+
     this.router.navigateByUrl('/category');
   }
   selectCateSub(cat){
-    this.catService.setSelectedCategory(cat);
+    this.api.indexItemSubCategory1(cat).subscribe(val=>{
+      this.catService.setSelectedCategory(val);
+    })
     this.router.navigateByUrl('/category');
   }
   selectCateSub1(cat){
-    this.catService.setSelectedCategory(cat);
+    this.api.indexItemSubCategory2(cat).subscribe(val=>{
+      this.catService.setSelectedCategory(val);
+    })
     this.router.navigateByUrl('/category');
   }
 

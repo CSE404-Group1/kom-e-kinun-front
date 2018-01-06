@@ -52,6 +52,16 @@ export class ApiService {
     let category = cate.replace(/ /g, "_");
     return this.http.get('http://127.0.0.1:8000/api/items/category/'+ category);
   }
+  // by sub category 1
+  indexItemSubCategory1(cate){
+    let category = cate.replace(/ /g, "_");
+    return this.http.get('http://127.0.0.1:8000/api/items/subcategory1/'+ category);
+  }
+  // by sub category 2
+  indexItemSubCategory2(cate){
+    let category = cate.replace(/ /g, "_");
+    return this.http.get('http://127.0.0.1:8000/api/items/subcategory2/'+ category);
+  }
 
 
   // add item
