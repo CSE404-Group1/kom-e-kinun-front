@@ -345,6 +345,36 @@ export class AdminAddProductComponent implements OnInit {
         "sony","samsung","lg","Fujifilm","walton","philips"
       ]
     }
+    if(val == "laptops"){
+      this.sub_cata_2 = [
+        "macbooks","notebooks"
+      ]
+    }
+    if(val == "printers & scanners"){
+      this.sub_cata_2 = [
+        "cartiges ink & toners","laser printers","office printers"
+      ]
+    }
+    if(val == "storage"){
+      this.sub_cata_2 = [
+        "usb flash drives","memory cards","extarnak hdd"
+      ]
+    }
+    if(val == "desktops & monitors"){
+      this.sub_cata_2 = [
+        "all in ones","desktop bundles","monitors"
+      ]
+    }
+    if(val == "computer accessories"){
+      this.sub_cata_2 = [
+        "laptop accessories","headphones","speaker","keyboards","networking","peripherals","mouses"
+      ]
+    }
+    if(val == "top brands"){
+      this.sub_cata_2 = [
+        "asus","acer","hp","lenovo","apple"
+      ]
+    }
 
     /******Final parenthesis******/
   }
