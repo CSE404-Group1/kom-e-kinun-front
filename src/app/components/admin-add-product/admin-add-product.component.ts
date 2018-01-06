@@ -290,7 +290,26 @@ export class AdminAddProductComponent implements OnInit {
 
       ]
     }
-    
+    if(val == "smartphones"){
+      this.sub_cata_2 = [
+        "samsung","huwawei","symphony","lg","asus","infinix","xiaomi","we","apple","lava","dcl","general mobile","helio","oppo","micromax"
+      ]
+    }
+    if(val == "mobile & tablet accessories"){
+      this.sub_cata_2 = [
+        "powerbanks","cases, covers & protections","memory cards","earphones & headsets","phone chargers","selfie-sticks","bluetooth accessories","vr headsets","cables & adaptors","other accessories","chargers","smart watches","batteries","tablet accessories","sim cards"
+      ]
+    }
+    if(val == "tablets"){
+      this.sub_cata_2 = [
+        "3g","wifi","below 8","below 9"
+      ]
+    }
+    if(val == "landline"){
+      this.sub_cata_2 = [
+        "cordless","corded"
+      ]
+    }
     /*Final PREN*/
   }
 
