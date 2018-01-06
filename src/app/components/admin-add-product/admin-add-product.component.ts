@@ -525,6 +525,36 @@ export class AdminAddProductComponent implements OnInit {
         "men","women","unisex"
       ]
     }
+    if(val == "boys fashion"){
+      this.sub_cata_2 = [
+        "boys shoes","boys clothing","boys accessories"
+      ]
+    }
+    if(val == "girls fashion"){
+      this.sub_cata_2 = [
+        "girls shoes","girls clothing","girls accessories"
+      ]
+    }
+    if(val == "babies fashion"){
+      this.sub_cata_2 = [
+        "babies shoes","babies clothing","babies accessories"
+      ]
+    }
+    if(val == "toys & games"){
+      this.sub_cata_2 = [
+        "fidget spiners","cars & remote control toys","dolls & accessories","baby & toddler toys","action figures & statue","puzzle & board games","fidget cubes","yo-yo","blocks & building toys","stuffed toys","learning & education","sports & outdoor play","pretend play","gift sets"
+      ]
+    }
+    if(val == "baby & toddler"){
+      this.sub_cata_2 = [
+        "diapers & wipes","baby care & safty","baby feeding","nappy changing","strollers & activity gear","baby health care","potty draining","nursuery & bedding","pacifier & accessories","safety equipment"
+      ]
+    }
+    if(val == "school essentials"){
+      this.sub_cata_2 = [
+        "stationeries","school bags","water bottles","tiffin box"
+      ]
+    }
 
     /******Final parenthesis******/
   }
