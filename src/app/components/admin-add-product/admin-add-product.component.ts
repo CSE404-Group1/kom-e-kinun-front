@@ -495,6 +495,36 @@ export class AdminAddProductComponent implements OnInit {
         "backpacks & briefcase","travel bags"
       ]
     }
+    if(val == "makeup"){
+      this.sub_cata_2 = [
+        "face","eye","lips","makeup kits","brushes & accessories","nails & body art"
+      ]
+    }
+    if(val == "personal care"){
+      this.sub_cata_2 = [
+        "personal hygiene","dental care","eye care","hand & feet","accessories"
+      ]
+    }
+    if(val == "men's grooming"){
+      this.sub_cata_2 = [
+        "men's skin care"
+      ]
+    }
+    if(val == "skin care"){
+      this.sub_cata_2 = [
+        "bath & body","face & body treatments","moisturizer & creams","facial cleaners","mask & peels","gifts & value packs"
+      ]
+    }
+    if(val == "health & wellness"){
+      this.sub_cata_2 = [
+        "diet & nutrition","medical supplies","suxual wellness","over the counter medicines"
+      ]
+    }
+    if(val == "fragrances"){
+      this.sub_cata_2 = [
+        "men","women","unisex"
+      ]
+    }
 
     /******Final parenthesis******/
   }
