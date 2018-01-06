@@ -555,6 +555,46 @@ export class AdminAddProductComponent implements OnInit {
         "stationeries","school bags","water bottles","tiffin box"
       ]
     }
+    if(val == "cooking essentials"){
+      this.sub_cata_2 = [
+        "rice, flours, pulses & grains","oils, vinegar & dressings","spices,masala & salt","syrups, sugars & sweeteners"
+      ]
+    }
+    if(val == "tea, coffee & beverages"){
+      this.sub_cata_2 = [
+        "tea","coffee & espesso","power drink mixes","milk & cream","sports & energy drinks","juice & non-carbonated drink"
+      ]
+    }
+    if(val == "breakfast"){
+      this.sub_cata_2 = [
+        "cerel, oats & flakes","honey & spreads"
+      ]
+    }
+    if(val == "canned & packeged foods"){
+      this.sub_cata_2 = [
+        "soups, ready meals & mixes","sauces & pickles","pasta, noodles & shemai","canned, dry & jarred food"
+      ]
+    }
+    if(val == "snacks"){
+      this.sub_cata_2 = [
+        "biscuits, cookies & cakes","chips & packaged foods","dried fruit, nuts & seeds "
+      ]
+    }
+    if(val == "chocolates & desserts"){
+      this.sub_cata_2 = [
+        "chocolate","candies, mints, gums & sweets"
+      ]
+    }
+    if(val == "laundry & home care"){
+      this.sub_cata_2 = [
+        "household cleaners","bathroom cleaners","laundry products","air freshners","dishwashing products","pest controls"
+      ]
+    }
+    if(val == "pet supplies"){
+      this.sub_cata_2 = [
+        "birds, fish & small animals","pet accessories"
+      ]
+    }
 
     /******Final parenthesis******/
   }
