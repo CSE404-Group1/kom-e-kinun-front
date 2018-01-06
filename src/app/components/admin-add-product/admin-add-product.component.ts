@@ -595,6 +595,36 @@ export class AdminAddProductComponent implements OnInit {
         "birds, fish & small animals","pet accessories"
       ]
     }
+    if(val == "books & stationery"){
+      this.sub_cata_2 = [
+        "stationery","home country books","foreign language books"
+      ]
+    }
+    if(val == "stationery"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "automobile & motorcycles"){
+      this.sub_cata_2 = [
+        "motorcycles","car accessories","other automotives & motorcycles"
+      ]
+    }
+    if(val == "travel & tours"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "lifestyle accessories"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "wholesale"){
+      this.sub_cata_2 = [
+
+      ]
+    }
 
     /******Final parenthesis******/
   }
