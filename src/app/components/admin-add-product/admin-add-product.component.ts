@@ -455,6 +455,46 @@ export class AdminAddProductComponent implements OnInit {
         "showpieces","vases","cusion inserts & covers","curtains, blinds & shades","clocks","other home decor","wall arts","candle & candle holders"
       ]
     }
+    if(val == "exercise & fitness"){
+      this.sub_cata_2 = [
+        "treadmills","exercise cycles","cross trainers","other equipments","supplements & proteins"
+      ]
+    }
+    if(val == "strength & training"){
+      this.sub_cata_2 = [
+        "dumbles","exercise benches","home gym","supports"
+      ]
+    }
+    if(val == "racket sports"){
+      this.sub_cata_2 = [
+        "badminton","tennis","table tennis"
+      ]
+    }
+    if(val == "team sports"){
+      this.sub_cata_2 = [
+        "cricket","football"
+      ]
+    }
+    if(val == "outdoor activities"){
+      this.sub_cata_2 = [
+        "cycling","water sports","camping & hiking"
+      ]
+    }
+    if(val == "shoes & clothing"){
+      this.sub_cata_2 = [
+        "men's sports","women's sports","kids sports"
+      ]
+    }
+    if(val == "fitness accessories"){
+      this.sub_cata_2 = [
+        "slimming belts","yoga mats"
+      ]
+    }
+    if(val == "luggage"){
+      this.sub_cata_2 = [
+        "backpacks & briefcase","travel bags"
+      ]
+    }
 
     /******Final parenthesis******/
   }
