@@ -410,6 +410,51 @@ export class AdminAddProductComponent implements OnInit {
         "kettles","coffee machines","juicers"
       ]
     }
+    if(val == "bedding"){
+      this.sub_cata_2 = [
+        "bedsheets","blankets & duvets","pillow covers","mattresses"
+      ]
+    }
+    if(val == "furniture"){
+      this.sub_cata_2 = [
+        "bean bags","office furnitures","bedroom furnitures","living room furnitures","kitchen & dining furnitures"
+      ]
+    }
+    if(val == "lighting"){
+      this.sub_cata_2 = [
+        "decorative lamps","ceiling lights","lighting bulbs"
+      ]
+    }
+    if(val == "kitchen & dining"){
+      this.sub_cata_2 = [
+        "kitchen tools","bakeware","table ware","kitchen storages","grilling & bbq utensils","cook ware","cooking knives"
+      ]
+    }
+    if(val == "home fixures & repairs"){
+      this.sub_cata_2 = [
+        "electric fixures","hand tools & repairs"
+      ]
+    }
+    if(val == "bathroom accessories"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "outdoor & garden"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "home storage supplies"){
+      this.sub_cata_2 = [
+
+      ]
+    }
+    if(val == "home decor"){
+      this.sub_cata_2 = [
+        "showpieces","vases","cusion inserts & covers","curtains, blinds & shades","clocks","other home decor","wall arts","candle & candle holders"
+      ]
+    }
 
     /******Final parenthesis******/
   }
