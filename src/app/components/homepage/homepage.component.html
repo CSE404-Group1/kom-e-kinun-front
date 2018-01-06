@@ -1,16 +1,87 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 well" *ngFor="let item of products">
-      <div class="row">
-        <div class="col-md-4 col-sm-4 col-xm-4">
-          <img id="item-image" src="{{'http://127.0.0.1:8000/storage/'+item.image.substring(7)}}" alt="">
+<!-- GRIDS -->
+
+<!-- ROW-1 -->
+<!-- animated infinite flipInY  -->
+<div class="container-fluid" style="height: 100vh">
+    <div class="row a">
+        <div class="grid animated col-xs-12 col-sm-6 col-md-3 a1 ">
+            <div class="thecard">
+                <div class="back">Card 1 - Back</div>
+                <div class="front">Card 1 - Front</div>
+            </div>
         </div>
-        <div class="col-md-4 col-sm-4 col-xm-4">
-          <h4>{{item.name}}</h4>
-          <p><span id="actual-price">৳ {{item.actual_price}}</span> <span id="sale-price">৳{{item.sale_price}}</span></p>
-          <p>{{item.brand_name}}</p>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-6 a2">
+            <div class="thecard">
+                <div class="back">Card 2 - Back</div>
+                <div class="front">Card 2 - Front</div>
+            </div>
         </div>
-      </div>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-3 a3">
+            <div class="thecard">
+                <div class="back">Card 3 - Back</div>
+                <div class="front">Card 3 - Front</div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+    <!-- ROW-2 -->
+    <div class="row b">
+        <div class="grid animated col-xs-12 col-sm-6 col-md-3 b1">
+            <div class="thecard">
+                <div class="back">Card 4 - Back</div>
+                <div class="front">Card4 - Front</div>
+            </div>
+        </div>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-3 b2">
+            <div class="thecard">
+                <div class="back">Card 5 - Back</div>
+                <div class="front">Card 5 - Front</div>
+            </div>
+        </div>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-3 b3">
+            <div class="thecard">
+                <div class="back">Card 6 - Back</div>
+                <div class="front">Card 6 - Front</div>
+            </div>
+        </div>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-3 b4">
+            <div class="thecard">
+                <div class="back">Card 7 - Back</div>
+                <div class="front">Card 7 - Front</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ROW-3 -->
+    <div class="row c">
+        <div class="grid animated col-xs-12 col-sm-6 col-md-2 c1">
+            <div class="thecard">
+                <div class="back">Card 8 - Back</div>
+                <div class="front">Card 8 - Front</div>
+            </div>
+        </div>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-2 c2">
+            <div class="thecard">
+                <div class="back">Card 9 - Back</div>
+                <div class="front">Card 9 - Front</div>
+            </div>
+        </div>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-4 c3">
+            <div class="thecard">
+                <div class="back">Card 10 - Back</div>
+                <div class="front">Card 10 - Front</div>
+            </div>
+        </div>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-2 c4">
+            <div class="thecard">
+                <div class="back">Card 11 - Back</div>
+                <div class="front">Card 11 - Front</div>
+            </div>
+        </div>
+        <div class="grid animated col-xs-12 col-sm-6 col-md-2 c5">
+            <div class="thecard">
+                <div class="back">Card 12 - Back</div>
+                <div class="front">Card 12 - Front</div>
+            </div>
+        </div>
+    </div>

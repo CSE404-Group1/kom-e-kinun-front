@@ -12,7 +12,9 @@ export class CategorypageComponent implements OnInit, OnChanges {
   constructor(private catService:SelectedCategoryService) { }
 
   ngOnInit() {
-    this.selectedCategory = this.catService.getSelectedCategory();
+    this.catService.getSelectedCategory().subscribe(val=>{
+      this.selectedCategory = val;
+    });
   }
   ngOnChanges() {
   }
