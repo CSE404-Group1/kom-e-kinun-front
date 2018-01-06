@@ -8,7 +8,7 @@ export class SelectedCategoryService {
 
   constructor() {  }
 
-  private selectedCategory:Subject<string> = new Subject()
+  private selectedCategory:Subject<any> = new Subject()
 
 
   setSelectedCategory(cat){

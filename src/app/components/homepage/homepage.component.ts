@@ -21,16 +21,16 @@ export class HomepageComponent implements OnInit {
       console.log(err);
     })
 
-
-    // jquery
-    setInterval(function addingClass() {
-        var x = Math.floor((Math.random() * 12));
-        var box = document.getElementsByClassName("grid")[x];
-        box.classList.add('flipInY');
-        setTimeout(function clearingClass(){
-            box.classList.remove('flipInY');
-        },2000);
-    }, 4000);
+    // FINAL DESIGN
+    // // jquery
+    // setInterval(function addingClass() {
+    //     var x = Math.floor((Math.random() * 12));
+    //     var box = document.getElementsByClassName("grid")[x];
+    //     box.classList.add('flipInY');
+    //     setTimeout(function clearingClass(){
+    //         box.classList.remove('flipInY');
+    //     },2000);
+    // }, 4000);
 
 
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { SelectedCategoryService } from '../../services/selected-category.service';
+import { log } from 'util';
 
 @Component({
   selector: 'app-categorypage',
@@ -14,6 +15,7 @@ export class CategorypageComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.catService.getSelectedCategory().subscribe(val=>{
       this.selectedCategory = val;
+      console.log(this.selectedCategory);
     });
   }
   ngOnChanges() {
