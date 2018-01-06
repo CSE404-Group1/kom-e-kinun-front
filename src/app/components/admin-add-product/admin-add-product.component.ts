@@ -151,7 +151,7 @@ export class AdminAddProductComponent implements OnInit {
 
     if (val == "mens fashion") {
       this.sub_cata_1 = [
-        "western clothing (male)", "men's shoes", "innerwear & nightwear", "traditional clothing (male)", "winter clothing (male)", "men's accessories", "men's watches", "other "
+        "western clothing (male)", "men's shoes", "innerwear & nightwear", "traditional clothing (male)", "winter clothing (male)", "men's accessories", "men's watches"
       ]
     }
     if (val == "womens fashion") {
@@ -215,7 +215,7 @@ export class AdminAddProductComponent implements OnInit {
     this.reqObj.sub_catagory_1 = val;
     console.log('subcate1 selected')
 
-    if (val == "western clothing") {
+    if (val == "western clothing (male)") {
       this.sub_cata_2 = [
         "Tshirts", "Polos", "Shirts", "Coats & Jackets", "Pants", "Jeans", "Shorts & Barmudas"
       ]
@@ -235,17 +235,17 @@ export class AdminAddProductComponent implements OnInit {
         "Ties & Cuffings","Wallets & Card Holders","Eyewear","Belts","Bags","Caps & Hats","Jewellery","Other Accessories"
       ]
     }
-    if(val == "mens watches"){
+    if(val == "men's watches"){
       this.sub_cata_2 = [
         "Analog","Chronograp","Smart","Digital"
       ]
     }
-    if(val == "winter clothing"){
+    if(val == "winter clothing (male)"){
       this.sub_cata_2 = [
         "Sweaters & Cardigans","Hoodies & Sweatshirts","Coats & Jackets","Gloves & Scarves"
       ]
     }
-    if(val == "traditional clothing"){
+    if(val == "traditional clothing (male)"){
       this.sub_cata_2 = [
         "Panjabis & Sherwanis","Fatuas & Kurtes","Waistcoats","Unstitched Fabric"
       ]
