@@ -1,3 +1,42 @@
-<p>
+<!-- <p>
   {{selectedProduct.name}}
-</p>
+</p> -->
+    <!-- Product -->
+    <div class="container-fluid margined-container-fluid">
+      <div class="row">
+          <!-- Image DIV -->
+          <div class="col-md-6 img text-center">
+              <img id="titleImg" src="{{'http://127.0.0.1:8000/storage/'+selectedProduct.image.substring(7)}}" alt="img" height="100%">
+          </div>
+
+          <!-- Description DIV -->
+          <div class="col-md-4 description">
+              <h2>{{selectedProduct.name}}</h2>
+              <small>By <span><a href="#">Shop Name</a></span></small>
+              <hr>
+              <h4 class="text-danger" id="off">Offer: <span>25% OFF</span></h4>
+              <h5 id="offPrice">After Offer Price: &#2547; <span>{{selectedProduct.sale_price}}</span></h5>
+              <h5 class="text-warning" id="originalPrice">Original Price: &#2547; <span>{{selectedProduct.actual_price}}</span></h5>
+              <p class="text-success" id="availability">Availability: <span>In Stock</span></p>
+              <p class="text-justify" id="offDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam laborum, possimus tenetur quisquam, soluta quam in officia laboriosam repellat vel.</p>
+              <p><a href="#" id="more">More</a></p>
+              <a href="{{selectedProduct.product_origin_page}}" target="blank" class="btn" id="buy">GET THIS OFFER</a>
+          </div>
+
+          <!-- Sidebar DIV -->
+          <div class="col-md-2">
+              <div class="text-center soldBy">
+                  <h6>Sold By</h6>
+                  <p><a href="#"><strong>ABC Shop</strong></a></p>
+                  <p>Delivery: <span> 5 - 7 </span> Days</p>
+                  <p>Warranty: <span> 2 </span> years</p>
+                  <p class="text-warning"> Condtions Apply</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <hr>
+<div class="container">
+  <h3>Product Description</h3>
+  <p>{{selectedProduct.description}}</p>
+</div>

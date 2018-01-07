@@ -1,5 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { SelectedProductService } from '../../services/selected-product.service';
+import { ApiService } from '../../services/api.service';
+
 
 
 @Component({
@@ -13,9 +15,10 @@ export class ItempageComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.selectedProduct = this.prod.getSelectedProduct();
+    console.log(this.prod.getSelectedProduct());
   }
   ngOnChanges(){
-   
+    this.selectedProduct = this.prod.getSelectedProduct();
   }
 
 }
