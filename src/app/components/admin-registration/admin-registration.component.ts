@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterModel } from '../../models/register.model';
 import { ApiService } from '../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-registration',
@@ -20,7 +21,7 @@ export class AdminRegistrationComponent implements OnInit {
   private locationError:string;
   private websiteError:string;
 
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService, private router:Router) { }
 
   ngOnInit() {
     this.reqObj = {
@@ -53,7 +54,8 @@ export class AdminRegistrationComponent implements OnInit {
 
     // calling the server
     this.api.register(this.reqObj).subscribe((res)=>{
-      console.log("success! "+res)
+      console.log("success! "+res);
+      this.router.navigateByUrl('/dashboard');
     },(err)=>{
       console.log(err.error)
       if(err.error.username) this.usernameError = err.error.username
