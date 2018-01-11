@@ -1,0 +1,29 @@
+.body{
+    height: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+a{
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: dodgerblue;
+}
+.fa-usd{
+    margin-right: 5px;
+}
+.fa-paper-plane{
+    margin-left: 10px;
+}
+.btn{
+    border-radius: 0px;
+}
+.btn:hover{
+    color: #ffffff;
+}
+.row{
+    max-width: 1150px;
+    margin: 0 auto;
+}
