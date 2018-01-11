@@ -1,4 +1,4 @@
-#item-image{
+/* #item-image{
   height: 120px;
   width: auto;
 }
@@ -10,4 +10,56 @@
 #actual-price{
   text-decoration: line-through;
   color: #888;
+} */
+
+/* Carousel */
+.carousel-caption{
+  color: #f86699;
+}
+
+@media (min-width: 1170px) {
+  .col-lg-15 {
+      width: 20%;
+      float: left;
+  }
+}
+.title{
+  padding: 10px;
+}
+.caption .btn{
+  background: #f86699;
+  border-radius: 0px;
+  border: none;
+}
+.caption h4{
+  color: #f86699;
+}
+.thumbnail{
+  border: 0px;
+  margin: 0px 3px 0px 3px;
+  box-shadow: none;
+}
+
+.pList{
+  border-left: 1px solid #dddddd;
+}
+
+.caption p{
+  text-align: justify;
+}
+.offTitle{
+  color: #f86699;
+  border-bottom: 1px solid #f86699;
+  padding-top: 0;
+  padding-bottom: 5px;
+}
+.percentage{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #f86699;
+  border: 1px solid #f86699;
+  padding: 3px 6px 3px 6px;
+}
+.catBody{
+  overflow-x: hidden;
 }
