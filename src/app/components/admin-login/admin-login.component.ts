@@ -20,7 +20,7 @@ export class AdminLoginComponent implements OnInit {
     this.reqObj = {
       grant_type: "password",
       client_id: "2",
-      client_secret: "PpCGKx9lShweP8ySBWOjxybRne1pHCu2EkZ1BXA4",
+      client_secret: "mPipNShK3CMWzBYTG5NSeo1ksbYrFGKISTnRozb8",
       username: "",
       password: "",
       scope: "*"
