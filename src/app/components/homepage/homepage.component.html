@@ -20,16 +20,15 @@
           <!-- Product List -->
               <!-- row 1 -->
               <div class="row">
-                  <div class="col-md-2" *ngFor="let item of products" (click)="selectProduct(item)">
-                      <div class="thumbnail">
+                  <div class="col-md-2 col-sm-3 col-xm-4" *ngFor="let item of products">
+                      <div id="item" class="thumbnail" (click)="selectProduct(item)">
                           <h4 class="offTitle">{{item.offer_description}}</h4>
                           <img id="item-image" src="{{'http://127.0.0.1:8000/storage/'+item.image.substring(7)}}" alt="">
                           <div class="caption">
                               <h3>{{item.name}}</h3>
                               <div class="row">
                                   <div class="col-md-8">
-                                      <h5 class="offPrice">After Offer Price: <span>৳ {{item.sale_price}}</span></h5>
-                                      <h5 class="text-warning originalPrice">Original Price: <span>৳ {{item.actual_price}}</span></h5>
+                                      <h5 class="offPrice"><span id="new">৳ {{item.sale_price}}</span><br><span id="old">৳ {{item.actual_price}}</span></h5>
                                   </div>
                                   <div class="col-md-4">
                                       <p><span class="percentage">{{getPercentage(item)}}%</span></p>

@@ -34,7 +34,6 @@ import { CategoryMenuComponent } from './components/category-menu/category-menu.
 // services
 import { ApiService } from './services/api.service';
 import { SelectedCategoryService } from './services/selected-category.service';
-import { SelectedProductService } from './services/selected-product.service';
 
 // guards
 import { AuthGuard } from './guards/auth.guard';
@@ -88,8 +87,7 @@ const appRoutes: Routes = [
   providers: [
     ApiService,
     AuthGuard,
-    SelectedCategoryService,
-    SelectedProductService
+    SelectedCategoryService
   ],
   bootstrap: [AppComponent]
 })

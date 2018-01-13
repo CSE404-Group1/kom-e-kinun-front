@@ -17,15 +17,16 @@ li{
     z-index: 1000;
     /* background: blue; */
 }
-.lnr-menu{
+.fa-bars{
     font-size: 25px;
-    color: #ff2052;
+    color: #fff;
+    margin: 5px 0px;
 }
 
 .menuIcon > a{
     padding: 20px;
     position: relative;
-    top: 18px;
+    top: 20px;
     left: -10px;
 
 }
@@ -41,7 +42,7 @@ li{
     border-top: 0px;
     text-align: left;
     position: relative;
-    top: 33px;
+    top: 36px;
     left: -14px;
     padding: 8px 0px 8px 0px;
     margin: 0px;

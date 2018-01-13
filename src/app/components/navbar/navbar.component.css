@@ -10,19 +10,21 @@ nav{
 }
 nav.navbar.navbar-default{
   margin-bottom:0px;
-  color: #f1f1f1;
+  color: #fff;
 }
 ul.navbar-nav li a{
-  color: #f1f1f1;
+  color: #fff;
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin: 5px auto;
 }
-
+.navbar-center{
+  margin: 0 auto
+}
 #logo{
-  width: 150px;
-  height: 30px;
-  margin: 15px;
+  width: 180px;
+  height: 40px;
+  margin: 10px 0px 0px 0px;
   background-image: url('../../../assets/images/kek_logo.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -44,10 +46,19 @@ ul.navbar-nav li a{
     background-color: #fff;
 }
 
-
-
 @media (min-width: 768px){
   .navbar {
       border-radius: 0px;
   }
+}
+
+ul.navbar-nav[_ngcontent-c1] li[_ngcontent-c1] a[_ngcontent-c1]{
+  color: #222;
+}
+.navbar-default a.dropdown-toggle I{
+  color: #f1f1f1;
+  font-size: 25px;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  background-color:transparent;
 }

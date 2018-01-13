@@ -1,6 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { SelectedCategoryService } from '../../services/selected-category.service';
-import { SelectedProductService } from '../../services/selected-product.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -11,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class CategorypageComponent implements OnInit, OnChanges {
   private selectedCategory:any;
 
-  constructor(private catService:SelectedCategoryService, private prod:SelectedProductService, private router:Router) { }
+  constructor(private catService:SelectedCategoryService, private router:Router) { }
 
   ngOnInit() {
     this.catService.getSelectedCategory().subscribe(val=>{

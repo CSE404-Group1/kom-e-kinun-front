@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { SelectedProductService } from '../../services/selected-product.service';
 import { Router } from '@angular/router';
 
 declare var $:any;
@@ -14,7 +13,7 @@ export class HomepageComponent implements OnInit {
 
   private products:any;
 
-  constructor(private api:ApiService, private prod:SelectedProductService, private router:Router) { }
+  constructor(private api:ApiService, private router:Router) { }
 
   ngOnInit() {
     this.api.getAllItems().subscribe((res)=>{
