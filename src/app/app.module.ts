@@ -43,8 +43,8 @@ import { AuthGuard } from './guards/auth.guard';
 // routes
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
-  { path: 'category', component: CategorypageComponent },
-  { path: 'item', component: ItempageComponent },
+  { path: 'category', component: CategorypageComponent},
+  { path: 'item/:id', component: ItempageComponent },
   { path: 'login', component: AdminLoginComponent },
   { path: 'register', component: AdminRegistrationComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },

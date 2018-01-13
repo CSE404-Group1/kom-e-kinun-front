@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { SelectedProductService } from '../../services/selected-product.service';
 import { ApiService } from '../../services/api.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -11,14 +12,13 @@ import { ApiService } from '../../services/api.service';
 })
 export class ItempageComponent implements OnInit, OnChanges {
   private selectedProduct:any;
-  constructor(private prod:SelectedProductService) { }
+  constructor(private api:ApiService, private route:ActivatedRoute) { }
 
   ngOnInit() {
-    this.selectedProduct = this.prod.getSelectedProduct();
-    console.log(this.prod.getSelectedProduct());
+    this.api.getItem(this.route.snapshot.paramMap.get('id')).subscribe(val => {
+      this.selectedProduct = val;
+    });
   }
-  ngOnChanges(){
-    this.selectedProduct = this.prod.getSelectedProduct();
-  }
+  ngOnChanges(){ }
 
 }

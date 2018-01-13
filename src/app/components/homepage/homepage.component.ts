@@ -38,8 +38,11 @@ export class HomepageComponent implements OnInit {
   }
 
   selectProduct(item){
-    this.prod.setSelectedProduct(item);
-    this.router.navigateByUrl('/item');
+    this.router.navigateByUrl('/item/'+item.id);
+  }
+
+  getPercentage(item){
+    return Math.round(((item.actual_price - item.sale_price)/item.actual_price)* 100)
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { SelectedCategoryService } from '../../services/selected-category.service';
 import { SelectedProductService } from '../../services/selected-product.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-categorypage',
@@ -18,13 +18,15 @@ export class CategorypageComponent implements OnInit, OnChanges {
       this.selectedCategory = val;
       console.log(this.selectedCategory);
     });
+
+    console.log();
+    
   }
   ngOnChanges() {
   }
 
   selectProduct(item){
-    this.prod.setSelectedProduct(item);
-    this.router.navigateByUrl('/item');
+    this.router.navigateByUrl('/item/'+item.id);
   }
 
 }

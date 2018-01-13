@@ -19,8 +19,9 @@
     background-color: #f8f8f8;
     padding: 10px;
 }
-.img{
-    height: 600px;
+.img #titleImg{
+    width: 100%;
+    height: auto;
 }
 #offPrice, #originalPrice, #availability{
     padding-top: 10px;
