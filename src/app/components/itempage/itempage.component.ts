@@ -1,5 +1,4 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { SelectedProductService } from '../../services/selected-product.service';
 import { ApiService } from '../../services/api.service';
 import { ActivatedRoute } from '@angular/router';
 

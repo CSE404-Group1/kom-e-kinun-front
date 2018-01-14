@@ -27,5 +27,8 @@ export class CategorypageComponent implements OnInit, OnChanges {
   selectProduct(item){
     this.router.navigateByUrl('/item/'+item.id);
   }
+  getPercentage(item){
+    return Math.round(((item.actual_price - item.sale_price)/item.actual_price)* 100)
+  }
 
 }
