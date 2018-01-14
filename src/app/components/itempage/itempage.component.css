@@ -33,12 +33,16 @@
 }
 #buy{
     margin-top: 10px;
-    background: #212121;
+    background: #FD6E26;
     color: white;
     border: 0px;
+    font-weight: bold;
 }
-a, #off{
-    color: #f00d5c;
+#off{
+    color: #FD6E26;
+    font-size: 1.6em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 .thumbnail{
     border: 0px;
@@ -46,15 +50,40 @@ a, #off{
     box-shadow: none;
 }
 .caption .btn{
-    background: #f86699;
+    background: #FD6E26;
     border-radius: 0px;
     border: none;
 }
 .caption h4{
-    color: #f86699;
+    color: #FD6E26;
 }
 .footer{
     height: 300px;
     background: #f86699;
     color: white;
+}
+a{
+    text-decoration: none;
+    color: #F34443;
+}
+a:hover{
+    text-decoration: none;
+    color: #592741;
+}
+#originalPrice{
+    color: #777777;
+    text-decoration: line-through;
+}
+#offPrice{
+    color: #F34443;
+}
+#availability{
+    color: #212121;
+}
+.Description h3{
+    font-size: 1.8em;
+    font-family: 'Lato', sans-serif;
+}
+.Description p{
+    text-align: justify;
 }

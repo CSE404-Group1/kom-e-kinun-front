@@ -3,7 +3,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     color: #f1f1f1;
-    background-color: #212121;
+    background-color: #592741;
 }
 a{
     font-size: 13px;
@@ -11,7 +11,7 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: dodgerblue;
+    color: white;
 }
 .fa-usd{
     margin-right: 5px;
