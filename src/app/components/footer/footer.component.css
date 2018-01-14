@@ -1,11 +1,13 @@
 .body{
-    height: 200px;
+    height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
+    color: #f1f1f1;
+    background-color: #212121;
 }
 a{
     font-size: 13px;
-    color: black;
+    color: #999;
     text-decoration: none;
 }
 a:hover{
@@ -19,6 +21,7 @@ a:hover{
 }
 .btn{
     border-radius: 0px;
+    color: #f1f1f1;
 }
 .btn:hover{
     color: #ffffff;
@@ -26,4 +29,7 @@ a:hover{
 .row{
     max-width: 1150px;
     margin: 0 auto;
+}
+p{
+    color: #999;
 }

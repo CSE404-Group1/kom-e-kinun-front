@@ -16,10 +16,11 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse" style="text-align:center">
       
+      
       <!-- <ul class="nav navbar-nav">
         <li><a href="" routeLink="/">Home</a></li>
       </ul> -->
-
+      
   
 
       <ul class="nav navbar-nav navbar-right" *ngIf="currentUser == null">
@@ -40,6 +41,10 @@
             </ul>
         </li>
       </ul>
+
+      <div id="search" class="nav navbar-nav navbar-right">
+          <input type="text" name="search" placeholder="">
+        </div>
     </div><!--/.nav-collapse -->
   </div><!--/.container-fluid -->
 </nav>

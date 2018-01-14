@@ -1,5 +1,5 @@
 nav{
-  background-color: #1E6BE8;
+  background-color: #D72F2E;
   border-radius: none;
   height: auto;
   border: none;
@@ -61,4 +61,40 @@ ul.navbar-nav[_ngcontent-c1] li[_ngcontent-c1] a[_ngcontent-c1]{
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
   background-color:transparent;
+}
+
+#search{
+  margin: 10px;
+  max-width:90%;
+  width: 330px;
+}
+
+/*#search input{
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #888;
+} */
+
+input[type=text] {
+  width: 180px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../../../assets/images/searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 5px 20px 5px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  outline: none;
+  margin: 5px;
+  float: right;
+  border: none;
+  color: #222;
+}
+
+input[type=text]:focus {
+  width: 100%;
 }
