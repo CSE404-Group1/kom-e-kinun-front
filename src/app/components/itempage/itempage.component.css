@@ -33,11 +33,12 @@
 }
 #buy{
     margin-top: 10px;
-    background: #f86699;
+    background: #212121;
     color: white;
+    border: 0px;
 }
 a, #off{
-    color: #f86699;
+    color: #f00d5c;
 }
 .thumbnail{
     border: 0px;

@@ -30,6 +30,7 @@ import { TermsAndConditionsComponent } from './components/terms-and-conditions/t
 import { AdminOverviewComponent } from './components/admin-overview/admin-overview.component';
 import { DashboardCalenderComponent } from './components/dashboard-calender/dashboard-calender.component';
 import { CategoryMenuComponent } from './components/category-menu/category-menu.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 // services
 import { ApiService } from './services/api.service';
@@ -75,7 +76,8 @@ const appRoutes: Routes = [
     NotFoundpageComponent,
     TermsAndConditionsComponent,
     DashboardCalenderComponent,
-    CategoryMenuComponent
+    CategoryMenuComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
