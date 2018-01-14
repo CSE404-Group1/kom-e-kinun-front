@@ -26,7 +26,7 @@
         <h5>Donate Us</h5>
         <p>If you find anything helpful,</p>
         <p>Please Donate us to help us helping you.</p>
-        <a href="" data-toggle="modal" data-target="#myModal" class="btn btn-success"><i class="fa fa-usd" aria-hidden="true"></i>DONATE<i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+        <a href="" data-toggle="" (click)="donatelink()" data-target="#myModal" class="btn btn-success"><i class="fa fa-usd" aria-hidden="true"></i>DONATE<i class="fa fa-paper-plane" aria-hidden="true"></i></a>
     </div>
 </div>
 
@@ -44,7 +44,7 @@
 
 
        <div class="modal-body">
-          <form action="developer.qpay.co/module/index.php" method="post" onSubmit="return validateform()">
+          <form method="post" onSubmit="return validateform()">
               <div class="form-group"  name="myform">
                 <div class="form-group">
                   <label for="name">Name:</label>
@@ -69,7 +69,7 @@
                 <input type="hidden" value="STORE NAME" name="store_name"/>
                 <input type="hidden" value="A TRASECTION ID" name="tran_id"/>
                 
-                <input type="submit" class="btn btn-success btn-block" value="DONATE">
+                <button (click)="donatelink()" class="btn btn-success btn-block">DONATE</button>
               </div>
             </form>
        </div>

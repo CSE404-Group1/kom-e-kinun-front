@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  donatelink(){
+    window.open('https://cse404-group1.github.io/paymentgateway/index.html', '_blank');    
+  }
+
 }
