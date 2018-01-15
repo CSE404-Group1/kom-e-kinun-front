@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" style="height:auto">
     <div class="form-intro">
       <i class="fa fa-archive" aria-hidden="true"></i>
       <h2>Add a new Product</h2>
     </div>
     <form class="form" #f="ngForm" (submit)="onSubmit(f)">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2" style="height:auto">
           <!-- name -->
           <div class="form-group">
             <span><i class="fa fa-archive" aria-hidden="true"></i></span><label for="username">Product Name</label><strong class="form-error" *ngIf="nameError">{{nameError}}</strong>

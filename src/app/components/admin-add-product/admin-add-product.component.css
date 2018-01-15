@@ -1,8 +1,11 @@
 .container{
   width: 100%;
+  background-color: #fff;
 }
 .form{
   padding: 30px 0px;
+  height: auto;
+  background-color: #fff;
 }
 .form-intro{
   margin: 0 auto;
